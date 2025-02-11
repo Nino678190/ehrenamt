@@ -1,0 +1,50 @@
+:root {
+    --main-background: #FCFCFC;
+    --main-text-color: #111111;
+    --main-card-bg-color: #424B54;
+    --main-border-color: #414141;
+    --main-link-color: lightblue;
+    --main-card-background: #212121;
+    --main-accent: #0DC1DC;
+    accent-color: var(--main-accent);
+    --main-border-radius: 5px;
+    --big-border-radius: 20px;
+    --main-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    --main-transition: 0.3s;
+    --main-margin-xxs: 4px;
+    --main-margin-xs: 8px;
+    --main-margin-s: 12px;
+    --main-margin-m: 16px;
+    --main-margin-l: 20px;
+    --main-margin-xl: 28px;
+    --main-margin-xxl: 40px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-background: #111111;
+        --main-text-color: #FCFCFC;
+        --main-card-bg-color: #424B54;
+        --main-border-color: #414141;
+        --main-link-color: lightblue;
+        --main-card-background: #212121;
+        --main-accent: #0DC1DC;
+    }
+}
+
+body {
+    background-color: var(--main-background);
+    color: var(--main-text-color);
+    margin: 0 5%;
+    padding: 0;
+    transition: background-color var(--main-transition);
+}
+
+a {
+    color: var(--main-link-color);
+}
+
+a:hover {
+    color: var(--main-accent); /*TODO Anpassen*/
+    
+}
