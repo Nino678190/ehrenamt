@@ -42,6 +42,30 @@ const questions = [
     }
 ]
 
+const ergebnisse = [
+    {
+        organisation: "",
+        beschreibung: "",
+        bild: "",
+        gruendung: "",
+        mitglieder: "",
+        webseite: "",
+        telefon: "",
+        email: "",
+        ortsverbaendeAnzahl: 0,
+        kategorie: "",
+        wert1: 0,
+        wert2: 0,
+        wert3: 0,
+        wert11: 0,
+        wert12: 0,
+        wert13: 0,
+        wert21: 0,
+        wert22: 0,
+        wert23: 0
+    }
+]
+
 function addQuestionToUser(){
     const id = localStorage.getItem("questionId");
     const question = questions[id];
@@ -183,30 +207,6 @@ function endFragen(){
     `
 }
 
-const ergebnisse = [
-    {
-        organisation: "",
-        beschreibung: "",
-        bild: "",
-        gruendung: "",
-        mitglieder: "",
-        webseite: "",
-        telefon: "",
-        email: "",
-        ortsverbaendeAnzahl: 0,
-        kategorie: "",
-        wert1: 0,
-        wert2: 0,
-        wert3: 0,
-        wert11: 0,
-        wert12: 0,
-        wert13: 0,
-        wert21: 0,
-        wert22: 0,
-        wert23: 0
-    }
-]
-
 function showErgebnis(){
     const wert1 = localStorage.getItem("wert1");
     const wert2 = localStorage.getItem("wert2");
@@ -281,10 +281,10 @@ function showOrga(){
         </section>
         <section>
             <h3>Fakten</h3>
-            <p>Gründung: ${org.gruendung}</p>
-            <p>Mitgliederzahl: ${org.mitglieder}</p>
-            <p>Anzahl der Ortsverbände${org.ortsverbaendeAnzahl}</p>
-            <p>Kategorie: ${org.kategorie}</p>
+            <p>Gründung: ${org.gruendung}</p><br>
+            <p>Mitgliederzahl: ${org.mitglieder}</p><br>
+            <p>Anzahl der Ortsverbände${org.ortsverbaendeAnzahl}</p><br>
+            <p>Kategorie: ${org.kategorie}</p><br>
         </section>
         <section>
             <h3>Beschreibung</h3>
