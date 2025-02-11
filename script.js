@@ -10,14 +10,16 @@ document.addEventListener("DOMContentLoaded", function(){
             </ul>
         </nav>
     `
-    if (id == null){
-        startFragen();
-        localStorage.setItem("questionId", 0);
-    } else {
-        if (id == questions.length){
-            endFragen();
+    if (window.location.pathname == "/index.html"){
+        if (id == null){
+            startFragen();
+            localStorage.setItem("questionId", 0);
         } else {
-            addQuestionToUser();
+            if (id == questions.length){
+                endFragen();
+            } else {
+                addQuestionToUser();
+            }
         }
     }
 });
@@ -44,8 +46,13 @@ function addQuestionToUser(){
     const id = localStorage.getItem("questionId");
     const question = questions[id];
     const container = document.getElementById("question-container");
+    container.innerHTML = "";
     container.innerHTML = `
-        <h2>${question.frage}</h2>
+        <section class="question">
+            <h2>${question.frage}</h2>
+            <p>${localStorage.getItem("questionId")}/${questions.length}</p>
+        </section>
+        
         <input type="radio" name="answer" value="1" id="answer1"><label for="answer1">${question.antwort1}</label><br>
         <input type="radio" name="answer" value="2" id="answer2"><label for="answer2">${question.antwort2}</label><br>
         <input type="radio" name="answer" value="3" id="answer3"><label for="answer3">${question.antwort3}</label><br>
@@ -57,9 +64,7 @@ function addQuestionToUser(){
 }
 
 function back(){
-    const container = document.getElementById("question-container");
-    container.innerHTML = "";
-    if (localStorage.getItem("questionId") == 0){
+    if (localStorage.getItem("questionId") - 1 == 0){
         startFragen();
     } else {
         const id = parseInt(localStorage.getItem("questionId")) - 1;
@@ -160,6 +165,7 @@ function calculate(){
 
 function startFragen(){
     const container = document.getElementById("question-container");
+    container.innerHTML = "";
     localStorage.clear();
     container.innerHTML = `
         <h2>Willkommen bei der Umfrage!</h2>
@@ -272,3 +278,23 @@ function showOrga(){
     `
 }
 
+function allOrga(){
+    const container = document.getElementById("orga-container");
+    for (let i = 0; i < organisation.length; i++) {
+        const inhalt = document.createElement("section");
+        inhalt.classList.add("ergebnis");
+        inhalt.innerHTML = `
+            <section>
+                <h2>${organisation[i].organisation}</h2>
+                <a href="${organisation[i].webseite}">&#127760;</a>
+            </section>
+            <section>
+                <p>${organisation[i].beschreibung}</p>
+            </section>
+        `
+        inhalt.addEventListener("click", function () {
+            window.location.href = "orga.html?id=" + i;
+        });
+        container.innerHTML += inhalt
+    }
+}
