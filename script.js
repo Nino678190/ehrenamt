@@ -221,28 +221,43 @@ function showErgebnis(){
     let ergebnis = [];
     for (let i = 0; i < ergebnisse.length; i++) {
         const org = ergebnisse[i];
-        const match1 = Math.abs(wert1 - org.wert1) + Math.abs(wert2 - org.wert2) + Math.abs(wert3 - org.wert3);
-        const match2 = Math.abs(wert11 - org.wert11) + Math.abs(wert12 - org.wert12) + Math.abs(wert13 - org.wert13);
-        const match3 = Math.abs(wert21 - org.wert21) + Math.abs(wert22 - org.wert22) + Math.abs(wert23 - org.wert23);
+        match1 = Math.abs(wert1 - org.wert1) + Math.abs(wert2 - org.wert2) + Math.abs(wert3 - org.wert3);
+        match2 = Math.abs(wert11 - org.wert11) + Math.abs(wert12 - org.wert12) + Math.abs(wert13 - org.wert13);
+        match3 = Math.abs(wert21 - org.wert21) + Math.abs(wert22 - org.wert22) + Math.abs(wert23 - org.wert23);
 
         const totalMatch = match1 + match2 + match3;
     
         ergebnis.push({
             organisation: org,
-            uebereinstimmung: totalMatch
+            uebereinstimmung: totalMatch,
+            match1: match1,
+            match2: match2,
+            match3: match3
         });
     }
     ergebnis.sort((a, b) => a.uebereinstimmung - b.uebereinstimmung);
+    container.innerHTML = "";
+    container.innerHTML = `
+        <h2>Dein passendes Ehrenamt</h2>
+        <section>
+            <h4>${ergebnis[0].match1}% Art 1</h4>
+            <h4>${ergebnis[0].match2}% Art 2</h4>
+            <h4>${ergebnis[0].match3}% Art 3</h4>
+        </section>
+    `
     for (let i = 0; i < ergebnis.length; i++) {
         const inhalt = document.createElement("section");
         inhalt.classList.add("ergebnis");
         inhalt.innerHTML = `
             <section>
-                <h2>${ergebnis[i].organisation}</h2>
-                <a href="${ergebnis[i].webseite}">&#127760;</a>
+            <h2>${ergebnis[i].organisation.organisation}</h2>
+            <a href="${ergebnis[i].organisation.webseite}">&#127760;</a>
             </section>
             <section>
-                <p>${ergebnis[i].beschreibung}</p>
+            <h4>Die Organisation deckt sich zu ${Math.round(100 - (ergebnis[i].uebereinstimmung / 3))}% mit deinen Angaben</h4>
+            </section>
+            <section>
+            <p>${ergebnis[i].organisation.beschreibung}</p>
             </section>
         `
         inhalt.addEventListener("click", function(){
