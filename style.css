@@ -35,7 +35,7 @@
 body {
     background-color: var(--main-background);
     color: var(--main-text-color);
-    margin: 0 5%;
+    margin: 0;
     padding: 0;
     transition: background-color var(--main-transition);
 }
@@ -46,5 +46,40 @@ a {
 
 a:hover {
     color: var(--main-accent); /*TODO Anpassen*/
-    
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--main-accent);
+}
+
+.ergebnis{
+    color: var(--main-accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: var(--main-border-radius);
+    background-color: var(--main-card-bg-color);
+    box-shadow: var(--main-box-shadow);
+    margin-top: var(--main-margin-xl);
+}
+
+#orga-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: var(--main-margin-xl);
+}
+
+#question-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: var(--main-margin-xl);
+    background-color: var(--main-card-bg-color);
 }
