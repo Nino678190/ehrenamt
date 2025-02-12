@@ -295,6 +295,7 @@ function showOrga(){
 
 function allOrga(){
     const container = document.getElementById("orga-container");
+    const organisation = ergebnisse;
     for (let i = 0; i < organisation.length; i++) {
         const inhalt = document.createElement("section");
         inhalt.classList.add("ergebnis");
