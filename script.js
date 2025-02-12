@@ -1,3 +1,5 @@
+//Messe 21.5  14:00 bis 15:10
+
 document.addEventListener("DOMContentLoaded", function(){
     const id = localStorage.getItem("questionId");
     const header = document.querySelector("header");
@@ -311,18 +313,23 @@ function showErgebnis(){
     //TODO: Überarbeiten
     for (let i = 0; i < ergebnisse.length; i++) {
         const org = ergebnisse[i];
-        match1 = Math.abs(kind - org.kind) + Math.abs(erwachsen - org.erwachsen) + Math.abs(sport - org.sport);
-        match2 = Math.abs(wert11 - org.wert11) + Math.abs(wert12 - org.wert12) + Math.abs(wert13 - org.wert13);
-        match3 = Math.abs(wert21 - org.wert21) + Math.abs(wert22 - org.wert22) + Math.abs(wert23 - org.wert23);
-        match4 = Math.abs(rettung - org.rettung) + Math.abs(hilfsorga - org.hilfsorga) + Math.abs(gemeinschaft - org.gemeinschaft);
-        const totalMatch = match1 + match2 + match3;
+        const match1 = Math.abs(kind - org.kind);
+        const match2 = Math.abs(erwachsen - org.erwachsen);
+        const match3 = Math.abs(sport - org.sport);
+        const match4 = Math.abs(rettung - org.rettung);
+        const match5 = Math.abs(hilfsorga - org.hilfsorga);
+        const match6 = Math.abs(gemeinschaft - org.gemeinschaft);
+        const totalMatch = match1 + match2 + match3 + match4 + match5 + match6;
     
         ergebnis.push({
             organisation: org,
             uebereinstimmung: totalMatch,
             match1: match1,
             match2: match2,
-            match3: match3
+            match3: match3,
+            match4: match4,
+            match5: match5,
+            match6: match6
         });
     }
     ergebnis.sort((a, b) => a.uebereinstimmung - b.uebereinstimmung);
@@ -333,6 +340,9 @@ function showErgebnis(){
             <h4>${ergebnis[0].match1}% Mit Kindern/Jugendlichen</h4>
             <h4>${ergebnis[0].match2}% Mit Erwachsenen</h4>
             <h4>${ergebnis[0].match3}% Sportlich</h4>
+            <h4>${ergebnis[0].match4}% In der Rettung</h4>
+            <h4>${ergebnis[0].match5}% In einer Hilfsorganisation</h4>
+            <h4>${ergebnis[0].match6}% Gemeinschaftlich</h4>
         </section>
     `
     for (let i = 0; i < ergebnis.length; i++) {
