@@ -24,21 +24,41 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 });
 
+//Kategorien:
+//- Mit Kindern/Jugend -> kind
+//- Mit Erwachsenen -> erwachsen
+//- Sport -> sport
+//- Rettung -> rettung
+//- Hilfsorganisation ->hilfsorga
+//- Gemeinschaftlich -> gemeinschaft
+
 const questions = [
     {
         frage: "",
         antwort1: "",
         antwort2: "",
         antwort3: "",
-        wert1: 0,
-        wert2: 0,
-        wert3: 0,
-        wert11: 0,
-        wert12: 0,
-        wert13: 0,
-        wert21: 0,
-        wert22: 0,
-        wert23: 0
+
+        kind: 0,
+        erwachsen: 0,
+        sport: 0,
+        rettung: 0,
+        hilfsorga: 0,
+        gemeinschaft: 0,
+
+        kind1: 0,
+        erwachsen1: 0,
+        sport1: 0,
+        rettung1: 0,
+        hilfsorga1: 0,
+        gemeinschaft1: 0,
+
+        kind2: 0,
+        erwachsen2: 0,
+        sport2: 0,
+        rettung2: 0,
+        hilfsorga2: 0,
+        gemeinschaft2: 0
     }
 ]
 
@@ -54,15 +74,15 @@ const ergebnisse = [
         email: "",
         ortsverbaendeAnzahl: 0,
         kategorie: "",
-        wert1: 0,
-        wert2: 0,
-        wert3: 0,
-        wert11: 0,
-        wert12: 0,
-        wert13: 0,
-        wert21: 0,
-        wert22: 0,
-        wert23: 0
+        skillsLernen: [],
+        skillsMitbringen: [],
+
+        kind: 0,
+        erwachsen: 0,
+        sport: 0,
+        rettung: 0,
+        hilfsorga: 0,
+        gemeinschaft: 0
     }
 ]
 
@@ -76,7 +96,6 @@ function addQuestionToUser(){
             <h2>${question.frage}</h2>
             <p>${localStorage.getItem("questionId")}/${questions.length}</p>
         </section>
-        
         <input type="radio" name="answer" value="1" id="answer1"><label for="answer1">${question.antwort1}</label><br>
         <input type="radio" name="answer" value="2" id="answer2"><label for="answer2">${question.antwort2}</label><br>
         <input type="radio" name="answer" value="3" id="answer3"><label for="answer3">${question.antwort3}</label><br>
@@ -103,13 +122,13 @@ function calculate(){
     const question = questions[id];
 
     if (answer == 1){
-        const aktuell1 = localStorage.getItem("wert1");
+        const aktuell1 = localStorage.getItem("kind");
         if (aktuell1 != null){
-            aktuell1 = aktuell1 + question.wert1;
+            aktuell1 = aktuell1 + question.kind;
         } else {
-            aktuell1 = question.wert1;
+            aktuell1 = question.kind;
         }
-        localStorage.setItem("wert1", aktuell1);
+        localStorage.setItem("kind", aktuell1);
 
         const aktuell11 = localStorage.getItem("wert11");
         if (aktuell11 != null){
@@ -128,13 +147,13 @@ function calculate(){
         localStorage.setItem("wert21", aktuell21);
         
     } else if (answer == 2){
-        const aktuell2 = localStorage.getItem("wert2");
+        const aktuell2 = localStorage.getItem("erwachsen");
         if (aktuell2 != null){
-            aktuell2 = aktuell2 + question.wert2;
+            aktuell2 = aktuell2 + question.erwachsen;
         } else {
-            aktuell2 = question.wert2;
+            aktuell2 = question.erwachsen;
         }
-        localStorage.setItem("wert2", aktuell2);
+        localStorage.setItem("erwachsen", aktuell2);
 
         const aktuell12 = localStorage.getItem("wert12");
         if (aktuell12 != null) {
@@ -152,13 +171,13 @@ function calculate(){
         }
         localStorage.setItem("wert22", aktuell22);
     } else {
-        const aktuell3 = localStorage.getItem("wert3");
+        const aktuell3 = localStorage.getItem("sport");
         if (aktuell3 != null){
-            aktuell3 = aktuell3 + question.wert3;
+            aktuell3 = aktuell3 + question.sport;
         } else {
-            aktuell3 = question.wert3;
+            aktuell3 = question.sport;
         }
-        localStorage.setItem("wert3", aktuell3);
+        localStorage.setItem("sport", aktuell3);
 
         const aktuell13 = localStorage.getItem("wert13");
         if (aktuell13 != null){
@@ -208,9 +227,9 @@ function endFragen(){
 }
 
 function showErgebnis(){
-    const wert1 = localStorage.getItem("wert1");
-    const wert2 = localStorage.getItem("wert2");
-    const wert3 = localStorage.getItem("wert3");
+    const kind = localStorage.getItem("kind");
+    const erwachsen = localStorage.getItem("erwachsen");
+    const sport = localStorage.getItem("sport");
     const wert11 = localStorage.getItem("wert11");
     const wert12 = localStorage.getItem("wert12");
     const wert13 = localStorage.getItem("wert13");
@@ -221,7 +240,7 @@ function showErgebnis(){
     let ergebnis = [];
     for (let i = 0; i < ergebnisse.length; i++) {
         const org = ergebnisse[i];
-        match1 = Math.abs(wert1 - org.wert1) + Math.abs(wert2 - org.wert2) + Math.abs(wert3 - org.wert3);
+        match1 = Math.abs(kind - org.kind) + Math.abs(erwachsen - org.erwachsen) + Math.abs(sport - org.sport);
         match2 = Math.abs(wert11 - org.wert11) + Math.abs(wert12 - org.wert12) + Math.abs(wert13 - org.wert13);
         match3 = Math.abs(wert21 - org.wert21) + Math.abs(wert22 - org.wert22) + Math.abs(wert23 - org.wert23);
 
@@ -272,21 +291,21 @@ function showOrga(){
     const org = ergebnisse[id];
     const container = document.getElementById("orga-container");
     container.innerHTML = `
-        <img src="${org.bild}" alt="${org.organisation}">
+        <img src="${org.bild}" alt="Bild der ${org.organisation}">
         <h2>${org.organisation}</h2>
-        <section>
+        <section class="OrgaKontakt">
             <a href="mailto:${org.email}">Mail</a>
             <a href="tel:${org.telefon}">Anrufen</a>
             <a href="${org.webseite}" target="_blank">Webseite</a>
         </section>
-        <section>
+        <section class="OrgaFakten<">
             <h3>Fakten</h3>
             <p>Gründung: ${org.gruendung}</p><br>
             <p>Mitgliederzahl: ${org.mitglieder}</p><br>
             <p>Anzahl der Ortsverbände${org.ortsverbaendeAnzahl}</p><br>
             <p>Kategorie: ${org.kategorie}</p><br>
         </section>
-        <section>
+        <section class="OrgaBeschreibung">
             <h3>Beschreibung</h3>
             <p>${org.beschreibung}</p>
         </section>
@@ -300,7 +319,7 @@ function allOrga(){
         const inhalt = document.createElement("section");
         inhalt.classList.add("ergebnis");
         inhalt.innerHTML = `
-            <section>
+            <section class="orgaHead">
                 <h2>${organisation[i].organisation}</h2>
                 <a href="${organisation[i].webseite}">&#127760;</a>
             </section>
