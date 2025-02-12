@@ -130,70 +130,142 @@ function calculate(){
         }
         localStorage.setItem("kind", aktuell1);
 
-        const aktuell11 = localStorage.getItem("wert11");
+        const aktuell11 = localStorage.getItem("erwachsen");
         if (aktuell11 != null){
-            aktuell11 = aktuell11 + question.wert11;
+            aktuell11 = aktuell11 + question.erwachsen;
         } else {
-            aktuell11 = question.wert11;
+            aktuell11 = question.erwachsen;
         }
-        localStorage.setItem("wert11", aktuell11);
+        localStorage.setItem("erwachsen", aktuell11);
 
-        const aktuell21 = localStorage.getItem("wert21");
+        const aktuell21 = localStorage.getItem("sport");
         if (aktuell21 != null){
-            aktuell21 = aktuell21 + question.wert21;
+            aktuell21 = aktuell21 + question.sport;
         } else {
-            aktuell21 = question.wert21;
+            aktuell21 = question.sport;
         }
-        localStorage.setItem("wert21", aktuell21);
+        localStorage.setItem("sport", aktuell21);
+
+        const aktuell31 = localStorage.getItem("rettung");
+        if (aktuell31 != null){
+            aktuell31 = aktuell31 + question.rettung;
+        } else {
+            aktuell31 = question.rettung;
+        }
+        localStorage.setItem("rettung", aktuell31);
+
+        const aktuell41 = localStorage.getItem("hilfsorga");
+        if (aktuell41 != null){
+            aktuell41 = aktuell41 + question.hilfsorga;
+        } else {
+            aktuell41 = question.hilfsorga;
+        }
+        localStorage.setItem("hilfsorga", aktuell41);
+
+        const aktuell51 = localStorage.getItem("gemeinschaft");
+        if (aktuell51 != null){
+            aktuell51 = aktuell51 + question.gemeinschaft;
+        } else {
+            aktuell51 = question.gemeinschaft;
+        }
+        localStorage.setItem("gemeinschaft", aktuell51);
         
     } else if (answer == 2){
-        const aktuell2 = localStorage.getItem("erwachsen");
-        if (aktuell2 != null){
-            aktuell2 = aktuell2 + question.erwachsen;
+        const aktuell1 = localStorage.getItem("kind");
+        if (aktuell1 != null){
+            aktuell1 = aktuell1 + question.kind1;
         } else {
-            aktuell2 = question.erwachsen;
+            aktuell1 = question.kind1;
         }
-        localStorage.setItem("erwachsen", aktuell2);
+        localStorage.setItem("kind", aktuell1);
 
-        const aktuell12 = localStorage.getItem("wert12");
-        if (aktuell12 != null) {
-            aktuell12 = aktuell2 + question.wert12;
+        const aktuell11 = localStorage.getItem("erwachsen");
+        if (aktuell11 != null){
+            aktuell11 = aktuell11 + question.erwachsen1;
         } else {
-            aktuell12 = question.wert12;
+            aktuell11 = question.erwachsen1;
         }
-        localStorage.setItem("wert12", aktuell12);
+        localStorage.setItem("erwachsen", aktuell11);
 
-        const aktuell22 = localStorage.getItem("wert22"); 
-        if (aktuell22 != null){
-            aktuell22 = aktuell22 + question.wert22;
+        const aktuell21 = localStorage.getItem("sport");
+        if (aktuell21 != null){
+            aktuell21 = aktuell21 + question.sport1;
         } else {
-            aktuell22 = question.wert22;
+            aktuell21 = question.sport1;
         }
-        localStorage.setItem("wert22", aktuell22);
+        localStorage.setItem("sport", aktuell21);
+
+        const aktuell31 = localStorage.getItem("rettung");
+        if (aktuell31 != null){
+            aktuell31 = aktuell31 + question.rettung1;
+        } else {
+            aktuell31 = question.rettung1;
+        }
+        localStorage.setItem("rettung", aktuell31);
+
+        const aktuell41 = localStorage.getItem("hilfsorga");
+        if (aktuell41 != null){
+            aktuell41 = aktuell41 + question.hilfsorga1;
+        } else {
+            aktuell41 = question.hilfsorga1;
+        }
+        localStorage.setItem("hilfsorga", aktuell41);
+
+        const aktuell51 = localStorage.getItem("gemeinschaft");
+        if (aktuell51 != null){
+            aktuell51 = aktuell51 + question.gemeinschaft1;
+        } else {
+            aktuell51 = question.gemeinschaft1;
+        }
+        localStorage.setItem("gemeinschaft", aktuell51);
     } else {
-        const aktuell3 = localStorage.getItem("sport");
-        if (aktuell3 != null){
-            aktuell3 = aktuell3 + question.sport;
+        const aktuell1 = localStorage.getItem("kind");
+        if (aktuell1 != null){
+            aktuell1 = aktuell1 + question.kind2;
         } else {
-            aktuell3 = question.sport;
+            aktuell1 = question.kind2;
         }
-        localStorage.setItem("sport", aktuell3);
+        localStorage.setItem("kind", aktuell1);
 
-        const aktuell13 = localStorage.getItem("wert13");
-        if (aktuell13 != null){
-            aktuell13 = aktuell13 + question.wert13;
+        const aktuell11 = localStorage.getItem("erwachsen");
+        if (aktuell11 != null){
+            aktuell11 = aktuell11 + question.erwachsen2;
         } else {
-            aktuell13 = question.wert13;
+            aktuell11 = question.erwachsen2;
         }
-        localStorage.setItem("wert13", aktuell13);
+        localStorage.setItem("erwachsen", aktuell11);
 
-        const aktuell23 = localStorage.getItem("wert23");
-        if (aktuell23 != null){
-            aktuell23 = aktuell23 + question.wert23;
+        const aktuell21 = localStorage.getItem("sport");
+        if (aktuell21 != null){
+            aktuell21 = aktuell21 + question.sport2;
         } else {
-            aktuell23 = question.wert23;
+            aktuell21 = question.sport2;
         }
-        localStorage.setItem("wert23", aktuell23);
+        localStorage.setItem("sport", aktuell21);
+
+        const aktuell31 = localStorage.getItem("rettung");
+        if (aktuell31 != null){
+            aktuell31 = aktuell31 + question.rettung2;
+        } else {
+            aktuell31 = question.rettung2;
+        }
+        localStorage.setItem("rettung", aktuell31);
+
+        const aktuell41 = localStorage.getItem("hilfsorga");
+        if (aktuell41 != null){
+            aktuell41 = aktuell41 + question.hilfsorga2;
+        } else {
+            aktuell41 = question.hilfsorga2;
+        }
+        localStorage.setItem("hilfsorga", aktuell41);
+
+        const aktuell51 = localStorage.getItem("gemeinschaft");
+        if (aktuell51 != null){
+            aktuell51 = aktuell51 + question.gemeinschaft2;
+        } else {
+            aktuell51 = question.gemeinschaft2;
+        }
+        localStorage.setItem("gemeinschaft", aktuell51);
     }
     const container = document.getElementById("question-container");
     container.innerHTML = "";
@@ -230,20 +302,19 @@ function showErgebnis(){
     const kind = localStorage.getItem("kind");
     const erwachsen = localStorage.getItem("erwachsen");
     const sport = localStorage.getItem("sport");
-    const wert11 = localStorage.getItem("wert11");
-    const wert12 = localStorage.getItem("wert12");
-    const wert13 = localStorage.getItem("wert13");
-    const wert21 = localStorage.getItem("wert21");
-    const wert22 = localStorage.getItem("wert22");
-    const wert23 = localStorage.getItem("wert23");
+    const rettung = localStorage.getItem("rettung");
+    const hilfsorga = localStorage.getItem("hilfsorga");
+    const gemeinschaft = localStorage.getItem("gemeinschaft");
+
     const container = document.getElementById("ergebnis-container");
     let ergebnis = [];
+    //TODO: Überarbeiten
     for (let i = 0; i < ergebnisse.length; i++) {
         const org = ergebnisse[i];
         match1 = Math.abs(kind - org.kind) + Math.abs(erwachsen - org.erwachsen) + Math.abs(sport - org.sport);
         match2 = Math.abs(wert11 - org.wert11) + Math.abs(wert12 - org.wert12) + Math.abs(wert13 - org.wert13);
         match3 = Math.abs(wert21 - org.wert21) + Math.abs(wert22 - org.wert22) + Math.abs(wert23 - org.wert23);
-
+        match4 = Math.abs(rettung - org.rettung) + Math.abs(hilfsorga - org.hilfsorga) + Math.abs(gemeinschaft - org.gemeinschaft);
         const totalMatch = match1 + match2 + match3;
     
         ergebnis.push({
@@ -259,9 +330,9 @@ function showErgebnis(){
     container.innerHTML = `
         <h2>Dein passendes Ehrenamt</h2>
         <section>
-            <h4>${ergebnis[0].match1}% Art 1</h4>
-            <h4>${ergebnis[0].match2}% Art 2</h4>
-            <h4>${ergebnis[0].match3}% Art 3</h4>
+            <h4>${ergebnis[0].match1}% Mit Kindern/Jugendlichen</h4>
+            <h4>${ergebnis[0].match2}% Mit Erwachsenen</h4>
+            <h4>${ergebnis[0].match3}% Sportlich</h4>
         </section>
     `
     for (let i = 0; i < ergebnis.length; i++) {
