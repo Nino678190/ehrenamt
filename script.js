@@ -310,7 +310,6 @@ function showErgebnis(){
 
     const container = document.getElementById("ergebnis-container");
     let ergebnis = [];
-    //TODO: Überarbeiten
     for (let i = 0; i < ergebnisse.length; i++) {
         const org = ergebnisse[i];
         const match1 = Math.abs(kind - org.kind);
