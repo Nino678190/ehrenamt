@@ -34,12 +34,11 @@ document.addEventListener("DOMContentLoaded", function(){
 //- Hilfsorganisation ->hilfsorga
 //- Gemeinschaftlich -> gemeinschaft
 
+//Fragen immer Skala mit 4 Stufen: Ja, Eher Ja, Eher Nein, Nein
+
 //Vorlage:
 // {
 //     frage: "",
-//     antwort1: "",
-//     antwort2: "",
-//     antwort3: "",
 
 //     kind: 0,
 //     erwachsen: 0,
@@ -66,9 +65,6 @@ document.addEventListener("DOMContentLoaded", function(){
 const questions = [
     {
         frage: "",
-        antwort1: "",
-        antwort2: "",
-        antwort3: "",
 
         kind: 0,
         erwachsen: 0,
@@ -89,13 +85,24 @@ const questions = [
         sport2: 0,
         rettung2: 0,
         hilfsorga2: 0,
-        gemeinschaft2: 0
+        gemeinschaft2: 0,
+
+        kind3: 0,
+        erwachsen3: 0,
+        sport3: 0,
+        rettung3: 0,
+        hilfsorga3: 0,
+        gemeinschaft3: 0,
+
+        kind3: 0,
+        erwachsen3: 0,
+        sport3: 0,
+        rettung3: 0,
+        hilfsorga3: 0,
+        gemeinschaft3: 0
     },
     {
         frage: "",
-        antwort1: "",
-        antwort2: "",
-        antwort3: "",
 
         kind: 0,
         erwachsen: 0,
@@ -116,14 +123,18 @@ const questions = [
         sport2: 0,
         rettung2: 0,
         hilfsorga2: 0,
-        gemeinschaft2: 0
+        gemeinschaft2: 0,
+
+        kind3: 0,
+        erwachsen3: 0,
+        sport3: 0,
+        rettung3: 0,
+        hilfsorga3: 0,
+        gemeinschaft3: 0
     },
     {
         frage: "",
-        antwort1: "",
-        antwort2: "",
-        antwort3: "",
-
+    
         kind: 0,
         erwachsen: 0,
         sport: 0,
@@ -143,13 +154,17 @@ const questions = [
         sport2: 0,
         rettung2: 0,
         hilfsorga2: 0,
-        gemeinschaft2: 0
+        gemeinschaft2: 0,
+
+        kind3: 0,
+        erwachsen3: 0,
+        sport3: 0,
+        rettung3: 0,
+        hilfsorga3: 0,
+        gemeinschaft3: 0
     },
     {
         frage: "",
-        antwort1: "",
-        antwort2: "",
-        antwort3: "",
 
         kind: 0,
         erwachsen: 0,
@@ -170,14 +185,18 @@ const questions = [
         sport2: 0,
         rettung2: 0,
         hilfsorga2: 0,
-        gemeinschaft2: 0
+        gemeinschaft2: 0,
+
+        kind3: 0,
+        erwachsen3: 0,
+        sport3: 0,
+        rettung3: 0,
+        hilfsorga3: 0,
+        gemeinschaft3: 0
     },
     {
         frage: "",
-        antwort1: "",
-        antwort2: "",
-        antwort3: "",
-
+        
         kind: 0,
         erwachsen: 0,
         sport: 0,
@@ -197,13 +216,17 @@ const questions = [
         sport2: 0,
         rettung2: 0,
         hilfsorga2: 0,
-        gemeinschaft2: 0
+        gemeinschaft2: 0,
+
+        kind3: 0,
+        erwachsen3: 0,
+        sport3: 0,
+        rettung3: 0,
+        hilfsorga3: 0,
+        gemeinschaft3: 0
     },
     {
         frage: "",
-        antwort1: "",
-        antwort2: "",
-        antwort3: "",
 
         kind: 0,
         erwachsen: 0,
@@ -224,14 +247,18 @@ const questions = [
         sport2: 0,
         rettung2: 0,
         hilfsorga2: 0,
-        gemeinschaft2: 0
+        gemeinschaft2: 0,
+
+        kind3: 0,
+        erwachsen3: 0,
+        sport3: 0,
+        rettung3: 0,
+        hilfsorga3: 0,
+        gemeinschaft3: 0
     },
     {
         frage: "",
-        antwort1: "",
-        antwort2: "",
-        antwort3: "",
-
+        
         kind: 0,
         erwachsen: 0,
         sport: 0,
@@ -251,14 +278,18 @@ const questions = [
         sport2: 0,
         rettung2: 0,
         hilfsorga2: 0,
-        gemeinschaft2: 0
+        gemeinschaft2: 0,
+
+        kind3: 0,
+        erwachsen3: 0,
+        sport3: 0,
+        rettung3: 0,
+        hilfsorga3: 0,
+        gemeinschaft3: 0
     },
     {
         frage: "",
-        antwort1: "",
-        antwort2: "",
-        antwort3: "",
-
+        
         kind: 0,
         erwachsen: 0,
         sport: 0,
@@ -278,14 +309,18 @@ const questions = [
         sport2: 0,
         rettung2: 0,
         hilfsorga2: 0,
-        gemeinschaft2: 0
+        gemeinschaft2: 0,
+
+        kind3: 0,
+        erwachsen3: 0,
+        sport3: 0,
+        rettung3: 0,
+        hilfsorga3: 0,
+        gemeinschaft3: 0
     },
     {
         frage: "",
-        antwort1: "",
-        antwort2: "",
-        antwort3: "",
-
+        
         kind: 0,
         erwachsen: 0,
         sport: 0,
@@ -305,13 +340,17 @@ const questions = [
         sport2: 0,
         rettung2: 0,
         hilfsorga2: 0,
-        gemeinschaft2: 0
+        gemeinschaft2: 0,
+
+        kind3: 0,
+        erwachsen3: 0,
+        sport3: 0,
+        rettung3: 0,
+        hilfsorga3: 0,
+        gemeinschaft3: 0
     },
     {
         frage: "",
-        antwort1: "",
-        antwort2: "",
-        antwort3: "",
 
         kind: 0,
         erwachsen: 0,
@@ -332,14 +371,18 @@ const questions = [
         sport2: 0,
         rettung2: 0,
         hilfsorga2: 0,
-        gemeinschaft2: 0
+        gemeinschaft2: 0,
+
+        kind3: 0,
+        erwachsen3: 0,
+        sport3: 0,
+        rettung3: 0,
+        hilfsorga3: 0,
+        gemeinschaft3: 0
     },
     {
         frage: "",
-        antwort1: "",
-        antwort2: "",
-        antwort3: "",
-
+        
         kind: 0,
         erwachsen: 0,
         sport: 0,
@@ -359,13 +402,17 @@ const questions = [
         sport2: 0,
         rettung2: 0,
         hilfsorga2: 0,
-        gemeinschaft2: 0
+        gemeinschaft2: 0,
+
+        kind3: 0,
+        erwachsen3: 0,
+        sport3: 0,
+        rettung3: 0,
+        hilfsorga3: 0,
+        gemeinschaft3: 0
     },
     {
         frage: "",
-        antwort1: "",
-        antwort2: "",
-        antwort3: "",
 
         kind: 0,
         erwachsen: 0,
@@ -386,13 +433,17 @@ const questions = [
         sport2: 0,
         rettung2: 0,
         hilfsorga2: 0,
-        gemeinschaft2: 0
+        gemeinschaft2: 0,
+
+        kind3: 0,
+        erwachsen3: 0,
+        sport3: 0,
+        rettung3: 0,
+        hilfsorga3: 0,
+        gemeinschaft3: 0
     },
     {
         frage: "",
-        antwort1: "",
-        antwort2: "",
-        antwort3: "",
 
         kind: 0,
         erwachsen: 0,
@@ -413,13 +464,17 @@ const questions = [
         sport2: 0,
         rettung2: 0,
         hilfsorga2: 0,
-        gemeinschaft2: 0
+        gemeinschaft2: 0,
+
+        kind3: 0,
+        erwachsen3: 0,
+        sport3: 0,
+        rettung3: 0,
+        hilfsorga3: 0,
+        gemeinschaft3: 0
     },
     {
         frage: "",
-        antwort1: "",
-        antwort2: "",
-        antwort3: "",
 
         kind: 0,
         erwachsen: 0,
@@ -440,13 +495,17 @@ const questions = [
         sport2: 0,
         rettung2: 0,
         hilfsorga2: 0,
-        gemeinschaft2: 0
+        gemeinschaft2: 0,
+
+        kind3: 0,
+        erwachsen3: 0,
+        sport3: 0,
+        rettung3: 0,
+        hilfsorga3: 0,
+        gemeinschaft3: 0
     },
     {
         frage: "",
-        antwort1: "",
-        antwort2: "",
-        antwort3: "",
 
         kind: 0,
         erwachsen: 0,
@@ -467,14 +526,18 @@ const questions = [
         sport2: 0,
         rettung2: 0,
         hilfsorga2: 0,
-        gemeinschaft2: 0
+        gemeinschaft2: 0,
+
+        kind3: 0,
+        erwachsen3: 0,
+        sport3: 0,
+        rettung3: 0,
+        hilfsorga3: 0,
+        gemeinschaft3: 0
     },
     {
         frage: "",
-        antwort1: "",
-        antwort2: "",
-        antwort3: "",
-
+        
         kind: 0,
         erwachsen: 0,
         sport: 0,
@@ -494,14 +557,18 @@ const questions = [
         sport2: 0,
         rettung2: 0,
         hilfsorga2: 0,
-        gemeinschaft2: 0
+        gemeinschaft2: 0,
+
+        kind3: 0,
+        erwachsen3: 0,
+        sport3: 0,
+        rettung3: 0,
+        hilfsorga3: 0,
+        gemeinschaft3: 0
     },
     {
         frage: "",
-        antwort1: "",
-        antwort2: "",
-        antwort3: "",
-
+        
         kind: 0,
         erwachsen: 0,
         sport: 0,
@@ -521,14 +588,18 @@ const questions = [
         sport2: 0,
         rettung2: 0,
         hilfsorga2: 0,
-        gemeinschaft2: 0
+        gemeinschaft2: 0,
+
+        kind3: 0,
+        erwachsen3: 0,
+        sport3: 0,
+        rettung3: 0,
+        hilfsorga3: 0,
+        gemeinschaft3: 0
     },
     {
         frage: "",
-        antwort1: "",
-        antwort2: "",
-        antwort3: "",
-
+        
         kind: 0,
         erwachsen: 0,
         sport: 0,
@@ -548,14 +619,18 @@ const questions = [
         sport2: 0,
         rettung2: 0,
         hilfsorga2: 0,
-        gemeinschaft2: 0
+        gemeinschaft2: 0,
+
+        kind3: 0,
+        erwachsen3: 0,
+        sport3: 0,
+        rettung3: 0,
+        hilfsorga3: 0,
+        gemeinschaft3: 0
     },
     {
         frage: "",
-        antwort1: "",
-        antwort2: "",
-        antwort3: "",
-
+        
         kind: 0,
         erwachsen: 0,
         sport: 0,
@@ -575,14 +650,18 @@ const questions = [
         sport2: 0,
         rettung2: 0,
         hilfsorga2: 0,
-        gemeinschaft2: 0
+        gemeinschaft2: 0,
+
+        kind3: 0,
+        erwachsen3: 0,
+        sport3: 0,
+        rettung3: 0,
+        hilfsorga3: 0,
+        gemeinschaft3: 0
     },
     {
         frage: "",
-        antwort1: "",
-        antwort2: "",
-        antwort3: "",
-
+        
         kind: 0,
         erwachsen: 0,
         sport: 0,
@@ -602,7 +681,14 @@ const questions = [
         sport2: 0,
         rettung2: 0,
         hilfsorga2: 0,
-        gemeinschaft2: 0
+        gemeinschaft2: 0,
+
+        kind3: 0,
+        erwachsen3: 0,
+        sport3: 0,
+        rettung3: 0,
+        hilfsorga3: 0,
+        gemeinschaft3: 0
     },
 ]
 
@@ -885,9 +971,7 @@ function addQuestionToUser(){
             <h2>${question.frage}</h2>
             <p>${localStorage.getItem("questionId")}/${questions.length}</p>
         </section>
-        <input type="radio" name="answer" value="1" id="answer1"><label for="answer1">${question.antwort1}</label><br>
-        <input type="radio" name="answer" value="2" id="answer2"><label for="answer2">${question.antwort2}</label><br>
-        <input type="radio" name="answer" value="3" id="answer3"><label for="answer3">${question.antwort3}</label><br>
+        <input type="range" name="answer" value="0.5" min="0" max="1" step="0.25" id="answer"><br>
         <section class="buttons">
             <button onclick="back()">Zurück</button>
             <button onclick="calculate()">Weiter</button>
