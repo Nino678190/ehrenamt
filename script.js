@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function(){
 //     rettung2: 0,
 //     hilfsorga2: 0,
 //     gemeinschaft2: 0
-// }
+// },
 
 const questions = [
     {
@@ -90,7 +90,520 @@ const questions = [
         rettung2: 0,
         hilfsorga2: 0,
         gemeinschaft2: 0
-    }
+    },
+    {
+        frage: "",
+        antwort1: "",
+        antwort2: "",
+        antwort3: "",
+
+        kind: 0,
+        erwachsen: 0,
+        sport: 0,
+        rettung: 0,
+        hilfsorga: 0,
+        gemeinschaft: 0,
+
+        kind1: 0,
+        erwachsen1: 0,
+        sport1: 0,
+        rettung1: 0,
+        hilfsorga1: 0,
+        gemeinschaft1: 0,
+
+        kind2: 0,
+        erwachsen2: 0,
+        sport2: 0,
+        rettung2: 0,
+        hilfsorga2: 0,
+        gemeinschaft2: 0
+    },
+    {
+        frage: "",
+        antwort1: "",
+        antwort2: "",
+        antwort3: "",
+
+        kind: 0,
+        erwachsen: 0,
+        sport: 0,
+        rettung: 0,
+        hilfsorga: 0,
+        gemeinschaft: 0,
+
+        kind1: 0,
+        erwachsen1: 0,
+        sport1: 0,
+        rettung1: 0,
+        hilfsorga1: 0,
+        gemeinschaft1: 0,
+
+        kind2: 0,
+        erwachsen2: 0,
+        sport2: 0,
+        rettung2: 0,
+        hilfsorga2: 0,
+        gemeinschaft2: 0
+    },
+    {
+        frage: "",
+        antwort1: "",
+        antwort2: "",
+        antwort3: "",
+
+        kind: 0,
+        erwachsen: 0,
+        sport: 0,
+        rettung: 0,
+        hilfsorga: 0,
+        gemeinschaft: 0,
+
+        kind1: 0,
+        erwachsen1: 0,
+        sport1: 0,
+        rettung1: 0,
+        hilfsorga1: 0,
+        gemeinschaft1: 0,
+
+        kind2: 0,
+        erwachsen2: 0,
+        sport2: 0,
+        rettung2: 0,
+        hilfsorga2: 0,
+        gemeinschaft2: 0
+    },
+    {
+        frage: "",
+        antwort1: "",
+        antwort2: "",
+        antwort3: "",
+
+        kind: 0,
+        erwachsen: 0,
+        sport: 0,
+        rettung: 0,
+        hilfsorga: 0,
+        gemeinschaft: 0,
+
+        kind1: 0,
+        erwachsen1: 0,
+        sport1: 0,
+        rettung1: 0,
+        hilfsorga1: 0,
+        gemeinschaft1: 0,
+
+        kind2: 0,
+        erwachsen2: 0,
+        sport2: 0,
+        rettung2: 0,
+        hilfsorga2: 0,
+        gemeinschaft2: 0
+    },
+    {
+        frage: "",
+        antwort1: "",
+        antwort2: "",
+        antwort3: "",
+
+        kind: 0,
+        erwachsen: 0,
+        sport: 0,
+        rettung: 0,
+        hilfsorga: 0,
+        gemeinschaft: 0,
+
+        kind1: 0,
+        erwachsen1: 0,
+        sport1: 0,
+        rettung1: 0,
+        hilfsorga1: 0,
+        gemeinschaft1: 0,
+
+        kind2: 0,
+        erwachsen2: 0,
+        sport2: 0,
+        rettung2: 0,
+        hilfsorga2: 0,
+        gemeinschaft2: 0
+    },
+    {
+        frage: "",
+        antwort1: "",
+        antwort2: "",
+        antwort3: "",
+
+        kind: 0,
+        erwachsen: 0,
+        sport: 0,
+        rettung: 0,
+        hilfsorga: 0,
+        gemeinschaft: 0,
+
+        kind1: 0,
+        erwachsen1: 0,
+        sport1: 0,
+        rettung1: 0,
+        hilfsorga1: 0,
+        gemeinschaft1: 0,
+
+        kind2: 0,
+        erwachsen2: 0,
+        sport2: 0,
+        rettung2: 0,
+        hilfsorga2: 0,
+        gemeinschaft2: 0
+    },
+    {
+        frage: "",
+        antwort1: "",
+        antwort2: "",
+        antwort3: "",
+
+        kind: 0,
+        erwachsen: 0,
+        sport: 0,
+        rettung: 0,
+        hilfsorga: 0,
+        gemeinschaft: 0,
+
+        kind1: 0,
+        erwachsen1: 0,
+        sport1: 0,
+        rettung1: 0,
+        hilfsorga1: 0,
+        gemeinschaft1: 0,
+
+        kind2: 0,
+        erwachsen2: 0,
+        sport2: 0,
+        rettung2: 0,
+        hilfsorga2: 0,
+        gemeinschaft2: 0
+    },
+    {
+        frage: "",
+        antwort1: "",
+        antwort2: "",
+        antwort3: "",
+
+        kind: 0,
+        erwachsen: 0,
+        sport: 0,
+        rettung: 0,
+        hilfsorga: 0,
+        gemeinschaft: 0,
+
+        kind1: 0,
+        erwachsen1: 0,
+        sport1: 0,
+        rettung1: 0,
+        hilfsorga1: 0,
+        gemeinschaft1: 0,
+
+        kind2: 0,
+        erwachsen2: 0,
+        sport2: 0,
+        rettung2: 0,
+        hilfsorga2: 0,
+        gemeinschaft2: 0
+    },
+    {
+        frage: "",
+        antwort1: "",
+        antwort2: "",
+        antwort3: "",
+
+        kind: 0,
+        erwachsen: 0,
+        sport: 0,
+        rettung: 0,
+        hilfsorga: 0,
+        gemeinschaft: 0,
+
+        kind1: 0,
+        erwachsen1: 0,
+        sport1: 0,
+        rettung1: 0,
+        hilfsorga1: 0,
+        gemeinschaft1: 0,
+
+        kind2: 0,
+        erwachsen2: 0,
+        sport2: 0,
+        rettung2: 0,
+        hilfsorga2: 0,
+        gemeinschaft2: 0
+    },
+    {
+        frage: "",
+        antwort1: "",
+        antwort2: "",
+        antwort3: "",
+
+        kind: 0,
+        erwachsen: 0,
+        sport: 0,
+        rettung: 0,
+        hilfsorga: 0,
+        gemeinschaft: 0,
+
+        kind1: 0,
+        erwachsen1: 0,
+        sport1: 0,
+        rettung1: 0,
+        hilfsorga1: 0,
+        gemeinschaft1: 0,
+
+        kind2: 0,
+        erwachsen2: 0,
+        sport2: 0,
+        rettung2: 0,
+        hilfsorga2: 0,
+        gemeinschaft2: 0
+    },
+    {
+        frage: "",
+        antwort1: "",
+        antwort2: "",
+        antwort3: "",
+
+        kind: 0,
+        erwachsen: 0,
+        sport: 0,
+        rettung: 0,
+        hilfsorga: 0,
+        gemeinschaft: 0,
+
+        kind1: 0,
+        erwachsen1: 0,
+        sport1: 0,
+        rettung1: 0,
+        hilfsorga1: 0,
+        gemeinschaft1: 0,
+
+        kind2: 0,
+        erwachsen2: 0,
+        sport2: 0,
+        rettung2: 0,
+        hilfsorga2: 0,
+        gemeinschaft2: 0
+    },
+    {
+        frage: "",
+        antwort1: "",
+        antwort2: "",
+        antwort3: "",
+
+        kind: 0,
+        erwachsen: 0,
+        sport: 0,
+        rettung: 0,
+        hilfsorga: 0,
+        gemeinschaft: 0,
+
+        kind1: 0,
+        erwachsen1: 0,
+        sport1: 0,
+        rettung1: 0,
+        hilfsorga1: 0,
+        gemeinschaft1: 0,
+
+        kind2: 0,
+        erwachsen2: 0,
+        sport2: 0,
+        rettung2: 0,
+        hilfsorga2: 0,
+        gemeinschaft2: 0
+    },
+    {
+        frage: "",
+        antwort1: "",
+        antwort2: "",
+        antwort3: "",
+
+        kind: 0,
+        erwachsen: 0,
+        sport: 0,
+        rettung: 0,
+        hilfsorga: 0,
+        gemeinschaft: 0,
+
+        kind1: 0,
+        erwachsen1: 0,
+        sport1: 0,
+        rettung1: 0,
+        hilfsorga1: 0,
+        gemeinschaft1: 0,
+
+        kind2: 0,
+        erwachsen2: 0,
+        sport2: 0,
+        rettung2: 0,
+        hilfsorga2: 0,
+        gemeinschaft2: 0
+    },
+    {
+        frage: "",
+        antwort1: "",
+        antwort2: "",
+        antwort3: "",
+
+        kind: 0,
+        erwachsen: 0,
+        sport: 0,
+        rettung: 0,
+        hilfsorga: 0,
+        gemeinschaft: 0,
+
+        kind1: 0,
+        erwachsen1: 0,
+        sport1: 0,
+        rettung1: 0,
+        hilfsorga1: 0,
+        gemeinschaft1: 0,
+
+        kind2: 0,
+        erwachsen2: 0,
+        sport2: 0,
+        rettung2: 0,
+        hilfsorga2: 0,
+        gemeinschaft2: 0
+    },
+    {
+        frage: "",
+        antwort1: "",
+        antwort2: "",
+        antwort3: "",
+
+        kind: 0,
+        erwachsen: 0,
+        sport: 0,
+        rettung: 0,
+        hilfsorga: 0,
+        gemeinschaft: 0,
+
+        kind1: 0,
+        erwachsen1: 0,
+        sport1: 0,
+        rettung1: 0,
+        hilfsorga1: 0,
+        gemeinschaft1: 0,
+
+        kind2: 0,
+        erwachsen2: 0,
+        sport2: 0,
+        rettung2: 0,
+        hilfsorga2: 0,
+        gemeinschaft2: 0
+    },
+    {
+        frage: "",
+        antwort1: "",
+        antwort2: "",
+        antwort3: "",
+
+        kind: 0,
+        erwachsen: 0,
+        sport: 0,
+        rettung: 0,
+        hilfsorga: 0,
+        gemeinschaft: 0,
+
+        kind1: 0,
+        erwachsen1: 0,
+        sport1: 0,
+        rettung1: 0,
+        hilfsorga1: 0,
+        gemeinschaft1: 0,
+
+        kind2: 0,
+        erwachsen2: 0,
+        sport2: 0,
+        rettung2: 0,
+        hilfsorga2: 0,
+        gemeinschaft2: 0
+    },
+    {
+        frage: "",
+        antwort1: "",
+        antwort2: "",
+        antwort3: "",
+
+        kind: 0,
+        erwachsen: 0,
+        sport: 0,
+        rettung: 0,
+        hilfsorga: 0,
+        gemeinschaft: 0,
+
+        kind1: 0,
+        erwachsen1: 0,
+        sport1: 0,
+        rettung1: 0,
+        hilfsorga1: 0,
+        gemeinschaft1: 0,
+
+        kind2: 0,
+        erwachsen2: 0,
+        sport2: 0,
+        rettung2: 0,
+        hilfsorga2: 0,
+        gemeinschaft2: 0
+    },
+    {
+        frage: "",
+        antwort1: "",
+        antwort2: "",
+        antwort3: "",
+
+        kind: 0,
+        erwachsen: 0,
+        sport: 0,
+        rettung: 0,
+        hilfsorga: 0,
+        gemeinschaft: 0,
+
+        kind1: 0,
+        erwachsen1: 0,
+        sport1: 0,
+        rettung1: 0,
+        hilfsorga1: 0,
+        gemeinschaft1: 0,
+
+        kind2: 0,
+        erwachsen2: 0,
+        sport2: 0,
+        rettung2: 0,
+        hilfsorga2: 0,
+        gemeinschaft2: 0
+    },
+    {
+        frage: "",
+        antwort1: "",
+        antwort2: "",
+        antwort3: "",
+
+        kind: 0,
+        erwachsen: 0,
+        sport: 0,
+        rettung: 0,
+        hilfsorga: 0,
+        gemeinschaft: 0,
+
+        kind1: 0,
+        erwachsen1: 0,
+        sport1: 0,
+        rettung1: 0,
+        hilfsorga1: 0,
+        gemeinschaft1: 0,
+
+        kind2: 0,
+        erwachsen2: 0,
+        sport2: 0,
+        rettung2: 0,
+        hilfsorga2: 0,
+        gemeinschaft2: 0
+    },
 ]
 
 //Vorlage:
