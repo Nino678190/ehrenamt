@@ -34,6 +34,35 @@ document.addEventListener("DOMContentLoaded", function(){
 //- Hilfsorganisation ->hilfsorga
 //- Gemeinschaftlich -> gemeinschaft
 
+//Vorlage:
+// {
+//     frage: "",
+//     antwort1: "",
+//     antwort2: "",
+//     antwort3: "",
+
+//     kind: 0,
+//     erwachsen: 0,
+//     sport: 0,
+//     rettung: 0,
+//     hilfsorga: 0,
+//     gemeinschaft: 0,
+
+//     kind1: 0,
+//     erwachsen1: 0,
+//     sport1: 0,
+//     rettung1: 0,
+//     hilfsorga1: 0,
+//     gemeinschaft1: 0,
+
+//     kind2: 0,
+//     erwachsen2: 0,
+//     sport2: 0,
+//     rettung2: 0,
+//     hilfsorga2: 0,
+//     gemeinschaft2: 0
+// }
+
 const questions = [
     {
         frage: "",
@@ -64,6 +93,30 @@ const questions = [
     }
 ]
 
+//Vorlage:
+// {
+//     organisation: "",
+//     beschreibung: "",
+//     bild: "",
+//     gruendung: "",
+//     mitglieder: "",
+//     webseite: "",
+//     telefon: "",
+//     email: "",
+//     addresse: "",
+//     ortsverbaendeAnzahl: 0,
+//     kategorie: "",
+//     skillsLernen: [],
+//     skillsMitbringen: [],
+
+//     kind: 0,
+//     erwachsen: 0,
+//     sport: 0,
+//     rettung: 0,
+//     hilfsorga: 0,
+//     gemeinschaft: 0
+// }
+
 const ergebnisse = [
     {
         organisation: "",
@@ -74,6 +127,7 @@ const ergebnisse = [
         webseite: "",
         telefon: "",
         email: "",
+        addresse: "",
         ortsverbaendeAnzahl: 0,
         kategorie: "",
         skillsLernen: [],
@@ -377,6 +431,7 @@ function showOrga(){
             <a href="mailto:${org.email}">Mail</a>
             <a href="tel:${org.telefon}">Anrufen</a>
             <a href="${org.webseite}" target="_blank">Webseite</a>
+            <p>Adresse: ${org.addresse}</p>
         </section>
         <section class="OrgaFakten<">
             <h3>Fakten</h3>
