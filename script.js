@@ -994,7 +994,7 @@ function calculate(){
     const id = localStorage.getItem("questionId");
     const question = questions[id];
 
-    if (answer == 1){
+    if (answer == 0){
         const aktuell1 = localStorage.getItem("kind");
         if (aktuell1 != null){
             aktuell1 = aktuell1 + question.kind;
@@ -1043,7 +1043,7 @@ function calculate(){
         }
         localStorage.setItem("gemeinschaft", aktuell51);
         
-    } else if (answer == 2){
+    } else if (answer == 0.25){
         const aktuell1 = localStorage.getItem("kind");
         if (aktuell1 != null){
             aktuell1 = aktuell1 + question.kind1;
@@ -1091,7 +1091,55 @@ function calculate(){
             aktuell51 = question.gemeinschaft1;
         }
         localStorage.setItem("gemeinschaft", aktuell51);
-    } else {
+    } if (answer == 0.5) {
+        const aktuell1 = localStorage.getItem("kind");
+        if (aktuell1 != null){
+            aktuell1 = aktuell1 + question.kind2;
+        } else {
+            aktuell1 = question.kind2;
+        }
+        localStorage.setItem("kind", aktuell1);
+
+        const aktuell11 = localStorage.getItem("erwachsen");
+        if (aktuell11 != null){
+            aktuell11 = aktuell11 + question.erwachsen2;
+        } else {
+            aktuell11 = question.erwachsen2;
+        }
+        localStorage.setItem("erwachsen", aktuell11);
+
+        const aktuell21 = localStorage.getItem("sport");
+        if (aktuell21 != null){
+            aktuell21 = aktuell21 + question.sport2;
+        } else {
+            aktuell21 = question.sport2;
+        }
+        localStorage.setItem("sport", aktuell21);
+
+        const aktuell31 = localStorage.getItem("rettung");
+        if (aktuell31 != null){
+            aktuell31 = aktuell31 + question.rettung2;
+        } else {
+            aktuell31 = question.rettung2;
+        }
+        localStorage.setItem("rettung", aktuell31);
+
+        const aktuell41 = localStorage.getItem("hilfsorga");
+        if (aktuell41 != null){
+            aktuell41 = aktuell41 + question.hilfsorga2;
+        } else {
+            aktuell41 = question.hilfsorga2;
+        }
+        localStorage.setItem("hilfsorga", aktuell41);
+
+        const aktuell51 = localStorage.getItem("gemeinschaft");
+        if (aktuell51 != null){
+            aktuell51 = aktuell51 + question.gemeinschaft2;
+        } else {
+            aktuell51 = question.gemeinschaft2;
+        }
+        localStorage.setItem("gemeinschaft", aktuell51);
+    } else if (answer == 0.75){
         const aktuell1 = localStorage.getItem("kind");
         if (aktuell1 != null){
             aktuell1 = aktuell1 + question.kind2;
@@ -1148,7 +1196,7 @@ function calculate(){
         const id = parseInt(localStorage.getItem("questionId")) + 1;
         addQuestionToUser(id);
         localStorage.setItem("questionId", id);
-    }
+    
 }
 
 function startFragen(){
