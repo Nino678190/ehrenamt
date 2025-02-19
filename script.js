@@ -734,7 +734,7 @@ const ergebnisse = [
     {
         organisation: "OKFN",
         beschreibung: "Die Open-Knowledge-Foundation setzt sich für offenes Wissen und demokratische Teilhabe ein. Dafür entwickeln Sie Technologien und Instrumente, mit dem Ziel die Zivilgesellschaft zu stärken.",
-        bild: "",
+        bild: "/images/jh.jpg",
         gruendung: "2011",
         mitglieder: "46",
         webseite: "https://okfn.de",
