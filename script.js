@@ -756,7 +756,7 @@ const ergebnisse = [
     {
         organisation: "DLRG",
         beschreibung: "Die Deutsche Lebens-Rettungs-Gesellschaft bildet Kinder, Jugendliche und Erwachsene im schwimmen aus. Diese Schwimmausbildung wird von ehrenamtlichen Helfern übernommen. Zudem betreibt die DLRG einen Großteil der Wasserrettungsstationen in Deutschland. Die DLRG bildet dafür auch Rettungsschwimmer aus, welche ehrenamtlich dort arbeiten.",
-        bild: "",
+        bild: "/images/dlrg.jpg",
         gruendung: "19. Oktober 1931",
         mitglieder: "1.900.000",
         webseite: "https://dlrg.de",
@@ -800,7 +800,7 @@ const ergebnisse = [
     {
         organisation: "Bahnhofsmission",
         beschreibung: "Die Bahnhofsmission ist eine ehrenamtliche Organisation, welche an Bahnhöfen alle Menschen unterstützt und auch Schutzbedürftigen Schutz bieten. Zudem unterstützen Sie Menschen in jeder Lebenslage.",
-        bild: "",
+        bild: "/images/bahnhofsmission.jpg",
         gruendung: "1910",
         mitglieder: "2.400",
         webseite: "https://berliner-stadtmission.de/bahnhofsmission",
@@ -844,7 +844,7 @@ const ergebnisse = [
     {
         organisation: "Kältebus",
         beschreibung: "Der Kältebus ist ein mobiles Hilfsangebot für obdachlose Menschen in Berlin. Der Kältebus fährt in den Wintermonaten durch Berlin und versorgt obdachlose Menschen mit warmen Getränken, Decken und Kleidung. Zudem bietet der Kältebus auch Gespräche und Hilfe an.",
-        bild: "",
+        bild: "/images/kaeltebus.jpg",
         gruendung: "1994",
         mitglieder: "5+",
         webseite: "https://berliner-stadtmission.de/kaeltehilfe",
