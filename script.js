@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 const questions = [
     {
-        frage: "",
+        frage: "Magst du Sport?",
 
         kind: 0,
         erwachsen: 0,
@@ -99,10 +99,17 @@ const questions = [
         sport3: 0,
         rettung3: 0,
         hilfsorga3: 0,
-        gemeinschaft3: 0
+        gemeinschaft3: 0,
+        
+        kind4: 0,
+        erwachsen4: 0,
+        sport4: 0,
+        rettung4: 0,
+        hilfsorga4: 0,
+        gemeinschaft4: 0
     },
     {
-        frage: "",
+        frage: "Benutzt du gerne deinen Kopf?",
 
         kind: 0,
         erwachsen: 0,
@@ -130,10 +137,17 @@ const questions = [
         sport3: 0,
         rettung3: 0,
         hilfsorga3: 0,
-        gemeinschaft3: 0
+        gemeinschaft3: 0,
+        
+        kind4: 0,
+        erwachsen4: 0,
+        sport4: 0,
+        rettung4: 0,
+        hilfsorga4: 0,
+        gemeinschaft4: 0
     },
     {
-        frage: "",
+        frage: "Machst du gerne außerschulische Aktivitäten?",
     
         kind: 0,
         erwachsen: 0,
@@ -161,10 +175,17 @@ const questions = [
         sport3: 0,
         rettung3: 0,
         hilfsorga3: 0,
-        gemeinschaft3: 0
+        gemeinschaft3: 0,
+        
+        kind4: 0,
+        erwachsen4: 0,
+        sport4: 0,
+        rettung4: 0,
+        hilfsorga4: 0,
+        gemeinschaft4: 0
     },
     {
-        frage: "",
+        frage: "Setzt du dich gerne für das Gute ein?",
 
         kind: 0,
         erwachsen: 0,
@@ -192,10 +213,17 @@ const questions = [
         sport3: 0,
         rettung3: 0,
         hilfsorga3: 0,
-        gemeinschaft3: 0
+        gemeinschaft3: 0,
+        
+        kind4: 0,
+        erwachsen4: 0,
+        sport4: 0,
+        rettung4: 0,
+        hilfsorga4: 0,
+        gemeinschaft4: 0
     },
     {
-        frage: "",
+        frage: "Behälst du in stressigen Situationen den Überblick?",
         
         kind: 0,
         erwachsen: 0,
@@ -223,10 +251,17 @@ const questions = [
         sport3: 0,
         rettung3: 0,
         hilfsorga3: 0,
-        gemeinschaft3: 0
+        gemeinschaft3: 0,
+        
+        kind4: 0,
+        erwachsen4: 0,
+        sport4: 0,
+        rettung4: 0,
+        hilfsorga4: 0,
+        gemeinschaft4: 0
     },
     {
-        frage: "",
+        frage: "Bist du ein emphatischer Mensch?",
 
         kind: 0,
         erwachsen: 0,
@@ -254,10 +289,17 @@ const questions = [
         sport3: 0,
         rettung3: 0,
         hilfsorga3: 0,
-        gemeinschaft3: 0
+        gemeinschaft3: 0,
+        
+        kind4: 0,
+        erwachsen4: 0,
+        sport4: 0,
+        rettung4: 0,
+        hilfsorga4: 0,
+        gemeinschaft4: 0
     },
     {
-        frage: "",
+        frage: "Übernimmt du gerne Verantwortung?",
         
         kind: 0,
         erwachsen: 0,
@@ -285,10 +327,17 @@ const questions = [
         sport3: 0,
         rettung3: 0,
         hilfsorga3: 0,
-        gemeinschaft3: 0
+        gemeinschaft3: 0,
+        
+        kind4: 0,
+        erwachsen4: 0,
+        sport4: 0,
+        rettung4: 0,
+        hilfsorga4: 0,
+        gemeinschaft4: 0
     },
     {
-        frage: "",
+        frage: "Würdest du gerne Selbstbewusst sein?",
         
         kind: 0,
         erwachsen: 0,
@@ -316,10 +365,17 @@ const questions = [
         sport3: 0,
         rettung3: 0,
         hilfsorga3: 0,
-        gemeinschaft3: 0
+        gemeinschaft3: 0,
+        
+        kind4: 0,
+        erwachsen4: 0,
+        sport4: 0,
+        rettung4: 0,
+        hilfsorga4: 0,
+        gemeinschaft4: 0
     },
     {
-        frage: "",
+        frage: "Möchtest du lernen mit Konflikten um zu gehen?",
         
         kind: 0,
         erwachsen: 0,
@@ -347,10 +403,17 @@ const questions = [
         sport3: 0,
         rettung3: 0,
         hilfsorga3: 0,
-        gemeinschaft3: 0
+        gemeinschaft3: 0,
+        
+        kind4: 0,
+        erwachsen4: 0,
+        sport4: 0,
+        rettung4: 0,
+        hilfsorga4: 0,
+        gemeinschaft4: 0
     },
     {
-        frage: "",
+        frage: "Möchtest du lernen ein Team anzuleiten?",
 
         kind: 0,
         erwachsen: 0,
@@ -378,10 +441,17 @@ const questions = [
         sport3: 0,
         rettung3: 0,
         hilfsorga3: 0,
-        gemeinschaft3: 0
+        gemeinschaft3: 0,
+        
+        kind4: 0,
+        erwachsen4: 0,
+        sport4: 0,
+        rettung4: 0,
+        hilfsorga4: 0,
+        gemeinschaft4: 0
     },
     {
-        frage: "",
+        frage: "Möchtest du lernen Probleme zu lösen?",
         
         kind: 0,
         erwachsen: 0,
@@ -409,166 +479,18 @@ const questions = [
         sport3: 0,
         rettung3: 0,
         hilfsorga3: 0,
-        gemeinschaft3: 0
-    },
-    {
-        frage: "",
-
-        kind: 0,
-        erwachsen: 0,
-        sport: 0,
-        rettung: 0,
-        hilfsorga: 0,
-        gemeinschaft: 0,
-
-        kind1: 0,
-        erwachsen1: 0,
-        sport1: 0,
-        rettung1: 0,
-        hilfsorga1: 0,
-        gemeinschaft1: 0,
-
-        kind2: 0,
-        erwachsen2: 0,
-        sport2: 0,
-        rettung2: 0,
-        hilfsorga2: 0,
-        gemeinschaft2: 0,
-
-        kind3: 0,
-        erwachsen3: 0,
-        sport3: 0,
-        rettung3: 0,
-        hilfsorga3: 0,
-        gemeinschaft3: 0
-    },
-    {
-        frage: "",
-
-        kind: 0,
-        erwachsen: 0,
-        sport: 0,
-        rettung: 0,
-        hilfsorga: 0,
-        gemeinschaft: 0,
-
-        kind1: 0,
-        erwachsen1: 0,
-        sport1: 0,
-        rettung1: 0,
-        hilfsorga1: 0,
-        gemeinschaft1: 0,
-
-        kind2: 0,
-        erwachsen2: 0,
-        sport2: 0,
-        rettung2: 0,
-        hilfsorga2: 0,
-        gemeinschaft2: 0,
-
-        kind3: 0,
-        erwachsen3: 0,
-        sport3: 0,
-        rettung3: 0,
-        hilfsorga3: 0,
-        gemeinschaft3: 0
-    },
-    {
-        frage: "",
-
-        kind: 0,
-        erwachsen: 0,
-        sport: 0,
-        rettung: 0,
-        hilfsorga: 0,
-        gemeinschaft: 0,
-
-        kind1: 0,
-        erwachsen1: 0,
-        sport1: 0,
-        rettung1: 0,
-        hilfsorga1: 0,
-        gemeinschaft1: 0,
-
-        kind2: 0,
-        erwachsen2: 0,
-        sport2: 0,
-        rettung2: 0,
-        hilfsorga2: 0,
-        gemeinschaft2: 0,
-
-        kind3: 0,
-        erwachsen3: 0,
-        sport3: 0,
-        rettung3: 0,
-        hilfsorga3: 0,
-        gemeinschaft3: 0
-    },
-    {
-        frage: "",
-
-        kind: 0,
-        erwachsen: 0,
-        sport: 0,
-        rettung: 0,
-        hilfsorga: 0,
-        gemeinschaft: 0,
-
-        kind1: 0,
-        erwachsen1: 0,
-        sport1: 0,
-        rettung1: 0,
-        hilfsorga1: 0,
-        gemeinschaft1: 0,
-
-        kind2: 0,
-        erwachsen2: 0,
-        sport2: 0,
-        rettung2: 0,
-        hilfsorga2: 0,
-        gemeinschaft2: 0,
-
-        kind3: 0,
-        erwachsen3: 0,
-        sport3: 0,
-        rettung3: 0,
-        hilfsorga3: 0,
-        gemeinschaft3: 0
-    },
-    {
-        frage: "",
+        gemeinschaft3: 0,
         
-        kind: 0,
-        erwachsen: 0,
-        sport: 0,
-        rettung: 0,
-        hilfsorga: 0,
-        gemeinschaft: 0,
-
-        kind1: 0,
-        erwachsen1: 0,
-        sport1: 0,
-        rettung1: 0,
-        hilfsorga1: 0,
-        gemeinschaft1: 0,
-
-        kind2: 0,
-        erwachsen2: 0,
-        sport2: 0,
-        rettung2: 0,
-        hilfsorga2: 0,
-        gemeinschaft2: 0,
-
-        kind3: 0,
-        erwachsen3: 0,
-        sport3: 0,
-        rettung3: 0,
-        hilfsorga3: 0,
-        gemeinschaft3: 0
+        kind4: 0,
+        erwachsen4: 0,
+        sport4: 0,
+        rettung4: 0,
+        hilfsorga4: 0,
+        gemeinschaft4: 0
     },
     {
-        frage: "",
-        
+        frage: "Hast du viel Freizeit?",
+
         kind: 0,
         erwachsen: 0,
         sport: 0,
@@ -595,11 +517,18 @@ const questions = [
         sport3: 0,
         rettung3: 0,
         hilfsorga3: 0,
-        gemeinschaft3: 0
+        gemeinschaft3: 0,
+        
+        kind4: 0,
+        erwachsen4: 0,
+        sport4: 0,
+        rettung4: 0,
+        hilfsorga4: 0,
+        gemeinschaft4: 0
     },
     {
-        frage: "",
-        
+        frage: "Wärst du bereit, viel Zeit aufzugeben?",
+
         kind: 0,
         erwachsen: 0,
         sport: 0,
@@ -626,70 +555,15 @@ const questions = [
         sport3: 0,
         rettung3: 0,
         hilfsorga3: 0,
-        gemeinschaft3: 0
-    },
-    {
-        frage: "",
+        gemeinschaft3: 0,
         
-        kind: 0,
-        erwachsen: 0,
-        sport: 0,
-        rettung: 0,
-        hilfsorga: 0,
-        gemeinschaft: 0,
-
-        kind1: 0,
-        erwachsen1: 0,
-        sport1: 0,
-        rettung1: 0,
-        hilfsorga1: 0,
-        gemeinschaft1: 0,
-
-        kind2: 0,
-        erwachsen2: 0,
-        sport2: 0,
-        rettung2: 0,
-        hilfsorga2: 0,
-        gemeinschaft2: 0,
-
-        kind3: 0,
-        erwachsen3: 0,
-        sport3: 0,
-        rettung3: 0,
-        hilfsorga3: 0,
-        gemeinschaft3: 0
-    },
-    {
-        frage: "",
-        
-        kind: 0,
-        erwachsen: 0,
-        sport: 0,
-        rettung: 0,
-        hilfsorga: 0,
-        gemeinschaft: 0,
-
-        kind1: 0,
-        erwachsen1: 0,
-        sport1: 0,
-        rettung1: 0,
-        hilfsorga1: 0,
-        gemeinschaft1: 0,
-
-        kind2: 0,
-        erwachsen2: 0,
-        sport2: 0,
-        rettung2: 0,
-        hilfsorga2: 0,
-        gemeinschaft2: 0,
-
-        kind3: 0,
-        erwachsen3: 0,
-        sport3: 0,
-        rettung3: 0,
-        hilfsorga3: 0,
-        gemeinschaft3: 0
-    },
+        kind4: 0,
+        erwachsen4: 0,
+        sport4: 0,
+        rettung4: 0,
+        hilfsorga4: 0,
+        gemeinschaft4: 0
+    }
 ]
 
 //Vorlage:
@@ -732,16 +606,16 @@ const ergebnisse = [
         skillsLernen: ["Lernen sich zu organisieren"],
         skillsMitbringen: [],
 
-        kind: 0,
-        erwachsen: 0,
+        kind: 2,
+        erwachsen: 9,
         sport: 0,
-        rettung: 0,
-        hilfsorga: 0,
-        gemeinschaft: 0
+        rettung: 3,
+        hilfsorga: 14,
+        gemeinschaft: 8
     },
     {
         organisation: "BdP",
-        beschreibung: "Soziales Engement bei Pfadfinder und fördert Gemeinschaft",
+        beschreibung: "Soziales Engegement bei Pfadfinder und fördert Gemeinschaft",
         bild: "",
         gruendung: "1948",
         mitglieder: "80.000",
@@ -754,12 +628,12 @@ const ergebnisse = [
         skillsLernen: ["Lernen Verantwortung zu übernehmen"],
         skillsMitbringen: [],
 
-        kind: 0,
-        erwachsen: 0,
-        sport: 0,
+        kind: 13,
+        erwachsen: 7,
+        sport: 4,
         rettung: 0,
-        hilfsorga: 0,
-        gemeinschaft: 0
+        hilfsorga: 2,
+        gemeinschaft: 14
     },
     {
         organisation: "DRK",
@@ -776,12 +650,12 @@ const ergebnisse = [
         skillsLernen: [],
         skillsMitbringen: [],
 
-        kind: 0,
-        erwachsen: 0,
+        kind: 7,
+        erwachsen: 7,
         sport: 0,
-        rettung: 0,
-        hilfsorga: 0,
-        gemeinschaft: 0
+        rettung: 14,
+        hilfsorga: 10,
+        gemeinschaft: 6
     },
     {
         organisation: "THW",
@@ -829,17 +703,17 @@ const ergebnisse = [
     }, 
     {
         organisation: "OKFN",
-        beschreibung: "",
+        beschreibung: "Die Open-Knowledge-Foundation setzt sich für offenes Wissen und demokratische Teilhabe ein. Dafür entwickeln Sie Technologien und Instrumente, mit dem Ziel die Zivilgesellschaft zu stärken.",
         bild: "",
-        gruendung: "",
-        mitglieder: "",
-        webseite: "",
-        telefon: "",
-        email: "",
-        addresse: "",
+        gruendung: "2011",
+        mitglieder: "46",
+        webseite: "https://okfn.de",
+        telefon: "03097894230",
+        email: "info@okfn.de",
+        addresse: "Singerstr. 109, Berlin",
         ortsverbaendeAnzahl: 0,
-        kategorie: "",
-        skillsLernen: [],
+        kategorie: "Gemeinschaft",
+        skillsLernen: ["Teamarbeit"],
         skillsMitbringen: [],
 
         kind: 0,
@@ -851,25 +725,25 @@ const ergebnisse = [
     }, 
     {
         organisation: "DLRG",
-        beschreibung: "",
+        beschreibung: "Die Deutsche Lebens-Rettungs-Gesellschaft bildet Kinder, Jugendliche und Erwachsene im schwimmen aus. Diese Schwimmausbildung wird von ehrenamtlichen Helfern übernommen. Zudem betreibt die DLRG einen Großteil der Wasserrettungsstationen in Deutschland. Die DLRG bildet dafür auch Rettungsschwimmer aus, welche ehrenamtlich dort arbeiten.",
         bild: "",
-        gruendung: "",
-        mitglieder: "",
-        webseite: "",
-        telefon: "",
+        gruendung: "19. Oktober 1931",
+        mitglieder: "1.900.000",
+        webseite: "https://dlrg.de",
+        telefon: "030362095-0",
         email: "",
-        addresse: "",
-        ortsverbaendeAnzahl: 0,
-        kategorie: "",
-        skillsLernen: [],
+        addresse: "Am Pichelssee 20, 13595 Berlin",
+        ortsverbaendeAnzahl: 16,
+        kategorie: "Rettung",
+        skillsLernen: ["Schwimmen", "Gemeinschaft", "Teamarbeit"],
         skillsMitbringen: [],
 
-        kind: 0,
-        erwachsen: 0,
-        sport: 0,
-        rettung: 0,
-        hilfsorga: 0,
-        gemeinschaft: 0
+        kind: 12,
+        erwachsen: 9,
+        sport: 13,
+        rettung: 14,
+        hilfsorga: 7,
+        gemeinschaft: 12
     }, 
     {
         organisation: "Tierheim Berlin",
@@ -895,25 +769,25 @@ const ergebnisse = [
     }, 
     {
         organisation: "Bahnhofsmission",
-        beschreibung: "",
+        beschreibung: "Die Bahnhofsmission ist eine ehrenamtliche Organisation, welche an Bahnhöfen alle Menschen unterstützt und auch Schutzbedürftigen Schutz bieten. Zudem unterstützen Sie Menschen in jeder Lebenslage.",
         bild: "",
-        gruendung: "",
-        mitglieder: "",
-        webseite: "",
-        telefon: "",
-        email: "",
-        addresse: "",
-        ortsverbaendeAnzahl: 0,
-        kategorie: "",
-        skillsLernen: [],
+        gruendung: "1910",
+        mitglieder: "2.400",
+        webseite: "https://berliner-stadtmission.de/bahnhofsmission",
+        telefon: "0303138088",
+        email: "berlin-zoo@bahnhofsmission.de",
+        addresse: "Jebensstr. 5, 10623 Berlin",
+        ortsverbaendeAnzahl: 100,
+        kategorie: "Hilfsorganisation",
+        skillsLernen: ["Fachliche Skills", "soziale Kompetenzen"],
         skillsMitbringen: [],
 
-        kind: 0,
-        erwachsen: 0,
+        kind: 4,
+        erwachsen: 10,
         sport: 0,
-        rettung: 0,
-        hilfsorga: 0,
-        gemeinschaft: 0
+        rettung: 2,
+        hilfsorga: 14,
+        gemeinschaft: 10
     }, 
     {
         organisation: "Malteser",
@@ -927,7 +801,7 @@ const ergebnisse = [
         addresse: "",
         ortsverbaendeAnzahl: 0,
         kategorie: "",
-        skillsLernen: [],
+        skillsLernen: ["Stresssituationen bewältigen", "Erste Hilfe", "Teamarbeit"],
         skillsMitbringen: [],
 
         kind: 0,
@@ -948,16 +822,16 @@ const ergebnisse = [
         email: "",
         addresse: "",
         ortsverbaendeAnzahl: 0,
-        kategorie: "",
+        kategorie: "Rettung",
         skillsLernen: [],
         skillsMitbringen: [],
 
         kind: 0,
-        erwachsen: 0,
+        erwachsen: 10,
         sport: 0,
-        rettung: 0,
-        hilfsorga: 0,
-        gemeinschaft: 0
+        rettung: 14,
+        hilfsorga: 13,
+        gemeinschaft: 9
     }, 
 ]
 
@@ -995,7 +869,7 @@ function calculate() {
     const question = questions[id];
 
     const categories = ["kind", "erwachsen", "sport", "rettung", "hilfsorga", "gemeinschaft"];
-    const answerSuffix = answer === 0 ? "" : answer === 0.25 ? "1" : answer === 0.5 ? "2" : "3";
+    const answerSuffix = answer === 0 ? "" : answer === 0.25 ? "1" : answer === 0.5 ? "2" : answer === 0.75 ? "3" : "4";
 
     categories.forEach(category => {
         const currentValue = parseFloat(localStorage.getItem(category)) || 0;
