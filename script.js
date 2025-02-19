@@ -594,7 +594,7 @@ const ergebnisse = [
     {
         organisation: "Die Tafel",
         beschreibung: "Soziale Einrichtung, welche Menschen mit Lebensmitteln versorgt",
-        bild: "",
+        bild: "/images/tafel.jpg",
         gruendung: "1993",
         mitglieder: "92.000",
         webseite: "https://berliner-tafel.de",
@@ -616,10 +616,10 @@ const ergebnisse = [
     {
         organisation: "BdP",
         beschreibung: "Soziales Engegement bei Pfadfinder und fördert Gemeinschaft",
-        bild: "",
+        bild: "/images/bdp.jpg",
         gruendung: "1948",
         mitglieder: "80.000",
-        webseite: "https://pfadfinder.de",
+        webseite: "https://pfadfinden.de",
         telefon: "",
         email: "bbb@pfadfinder.de",
         addresse: "13",
@@ -638,7 +638,7 @@ const ergebnisse = [
     {
         organisation: "DRK",
         beschreibung: "Das DRK ist eine Hilfsorganisation, welche sich für Menschen in Not einsetzt. Das DRK bietet viele verschiedene Dienste an, wie z.B. Rettungsdienst, Katastrophenschutz, Erste-Hilfe-Kurse und soziale Dienste.",
-        bild: "",
+        bild: "/images/drk.jpg",
         gruendung: "25. Januar 1921",
         mitglieder: "3.000.000 Deutschland",
         webseite: "https://drk-berlin.de",
@@ -660,7 +660,7 @@ const ergebnisse = [
     {
         organisation: "THW",
         beschreibung: "Das Technische Hilfswerk, kurz THW, ist eine Zivilschutzbehörde, die sich auf technisch-humanitäre Hilfeleistungen im Zivil- und Katastrophenschutz spezialisiert.",
-        bild: "",
+        bild: "/images/thw.jpg",
         gruendung: "22. August 1950",
         mitglieder: "88.000",
         webseite: "https://thw.de",
@@ -697,7 +697,7 @@ const ergebnisse = [
     {
         organisation: "FFW",
         beschreibung: "ie Freiwillige Feuerwehr ist eine öffentliche Feuerwehr, die sich hauptsächlich aus ehrenamtlichen Mitgliedern zusammensetzt. Zu ihren Aufgaben gehört unter anderem Brandbekämpfung, technische Hilfeleistung und Bürgerschutz.",
-        bild: "",
+        bild: "/images/BF_logo.png",
         gruendung: "1. Feburuar 1851",
         mitglieder: "1600",
         webseite: "https://berliner-feuerwehr.de/ueber-uns/freiwillige-feuerwehr",
@@ -822,7 +822,7 @@ const ergebnisse = [
     {
         organisation: "Malteser",
         beschreibung: "Die Malteser sind eine katholische Hilfsorganisation, welche sich für Menschen in Not einsetzt. Die Malteser bieten viele verschiedene Dienste an, wie z.B. Rettungsdienst, Katastrophenschutz, Erste-Hilfe-Kurse und soziale Dienste.",
-        bild: "",
+        bild: "/images/malteser.jpg",
         gruendung: "1953",
         mitglieder: "99.000",
         webseite: "https://malteser.de",
