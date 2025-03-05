@@ -75,11 +75,23 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: var(--main-margin-xl);
 }
 
-#question-container{
+main{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     margin-top: var(--main-margin-xl);
+}
+
+#question-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: var(--main-margin-xl);
+    margin-top: var(--main-margin-xl);
     background-color: var(--main-card-bg-color);
+    width: 85%;
+    height: 60dvh;
 }
