@@ -521,7 +521,7 @@ const questions = [
     },
     {
         frage: "Wärst du bereit, viel Zeit aufzugeben?",
-        
+
         kind: -1,
         erwachsen: -1,
         sport: -1,
@@ -859,8 +859,18 @@ const ergebnisse = [
 ]
 
 function addQuestionToUser(){
-    const id = localStorage.getItem("questionId");
+    let id = localStorage.getItem("questionId");
+    if (id == null){
+        localStorage.setItem("v", 0);
+        id = 0;
+    }
+    if (id == questions.length){
+        endFragen();
+        return;
+    }
+    console.log(id);
     const question = questions[id];
+    console.log(question);
     const container = document.getElementById("question-container");
     container.innerHTML = "";
     container.innerHTML = `
@@ -877,7 +887,10 @@ function addQuestionToUser(){
 }
 
 function back(){
-    if (localStorage.getItem("questionId") - 1 == 0){
+    const questionId = localStorage.getItem("questionId");
+    const newQuestionId = parseInt(questionId) - 1;
+    localStorage.setItem("questionId", newQuestionId);
+    if (newQuestionId === 0){
         startFragen();
     } else {
         const id = parseInt(localStorage.getItem("questionId")) - 1;
@@ -887,7 +900,7 @@ function back(){
 }
 
 function calculate() {
-    const answer = parseFloat(document.querySelector('input[name="answer"]:checked').value);
+    const answer = parseFloat(document.getElementById('answer').value);
     const id = localStorage.getItem("questionId");
     const question = questions[id];
 
@@ -906,8 +919,8 @@ function calculate() {
         endFragen();
     } else {
         const nextId = parseInt(id) + 1;
-        addQuestionToUser(nextId);
         localStorage.setItem("questionId", nextId);
+        addQuestionToUser(nextId);
     }
 }
 
@@ -915,6 +928,15 @@ function startFragen(){
     const container = document.getElementById("question-container");
     container.innerHTML = "";
     localStorage.clear();
+
+    localStorage.setItem("questionId", 0);
+    localStorage.setItem("kind", 0);    
+    localStorage.setItem("erwachsen", 0);
+    localStorage.setItem("sport", 0);
+    localStorage.setItem("rettung", 0);
+    localStorage.setItem("hilfsorga", 0);
+    localStorage.setItem("gemeinschaft", 0);
+
     container.innerHTML = `
         <h2>Willkommen bei der Umfrage!</h2>
         <p>Beantworte die folgenden Fragen um ein passendes Ehrenamt zu erhalten.</p>
@@ -926,9 +948,11 @@ function endFragen(){
     const container = document.getElementById("question-container");
     container.innerHTML = `
         <h2>Vielen Dank für die Teilnahme!</h2>
-        <p>Dein passendes Ehrenamt ist <a href="ergebnis.html">Hier</a></p>
+        <p>Die Ergebnisse werden nun berechnet.</p>
+        <button onclick="showErgebnis()">Ergebnis anzeigen</button>
         <button onclick="startFragen()">Neue Umfrage</button>
     `
+
 }
 
 function showErgebnis(){
@@ -994,7 +1018,9 @@ function showErgebnis(){
             window.location.href = "orga.html?id=" + i;
         });
         container.innerHTML += inhalt
-    }    
+    }  
+    const body = document.querySelector("body");
+    body.appendChild(container);
 }
 
 function showOrga(){
