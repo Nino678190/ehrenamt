@@ -903,6 +903,12 @@ function calculate() {
     const answer = parseFloat(document.getElementById('answer').value);
     const id = localStorage.getItem("questionId");
     const question = questions[id];
+    console.log('kind', localStorage.getItem('kind'));
+    console.log('erwachsen', localStorage.getItem('erwachsen'));
+    console.log('sport', localStorage.getItem('sport'));
+    console.log('rettung', localStorage.getItem('rettung'));
+    console.log('hilfsorga', localStorage.getItem('hilfsorga'));
+    console.log('gemeinschaft', localStorage.getItem('gemeinschaft'));
 
     const categories = ["kind", "erwachsen", "sport", "rettung", "hilfsorga", "gemeinschaft"];
     const answerSuffix = answer === 0 ? "" : answer === 0.25 ? "1" : answer === 0.5 ? "2" : answer === 0.75 ? "3" : "4";
@@ -963,7 +969,7 @@ function showErgebnis(){
     const hilfsorga = localStorage.getItem("hilfsorga");
     const gemeinschaft = localStorage.getItem("gemeinschaft");
 
-    const container = document.getElementById("ergebnis-container");
+    const container = document.createElement('section');
     let ergebnis = [];
     for (let i = 0; i < ergebnisse.length; i++) {
         const org = ergebnisse[i];
@@ -987,16 +993,23 @@ function showErgebnis(){
         });
     }
     ergebnis.sort((a, b) => a.uebereinstimmung - b.uebereinstimmung);
+    let kindProzent = Math.round(kind/14*100);
+    let erwachsenProzent = Math.round(erwachsen/14*100);
+    let sportProzent = Math.round(sport/14*100);
+    let rettungProzent = Math.round(rettung/14*100);
+    let hilfsorgaProzent = Math.round(hilfsorga/14*100);
+    let gemeinschaftProzent = Math.round(gemeinschaft/14*100);
+
     container.innerHTML = "";
     container.innerHTML = `
         <h2>Dein passendes Ehrenamt</h2>
         <section>
-            <h4>${ergebnis[0].match1}% Mit Kindern/Jugendlichen</h4>
-            <h4>${ergebnis[0].match2}% Mit Erwachsenen</h4>
-            <h4>${ergebnis[0].match3}% Sportlich</h4>
-            <h4>${ergebnis[0].match4}% In der Rettung</h4>
-            <h4>${ergebnis[0].match5}% In einer Hilfsorganisation</h4>
-            <h4>${ergebnis[0].match6}% Gemeinschaftlich</h4>
+            <h4>${kindProzent}% Mit Kindern/Jugendlichen</h4>
+            <h4>${erwachsenProzent}% Mit Erwachsenen</h4>
+            <h4>${sportProzent}% Sportlich</h4>
+            <h4>${rettungProzent}% In der Rettung</h4>
+            <h4>${hilfsorgaProzent}% In einer Hilfsorganisation</h4>
+            <h4>${gemeinschaftProzent}% Gemeinschaftlich</h4>
         </section>
     `
     for (let i = 0; i < ergebnis.length; i++) {
