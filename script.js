@@ -931,7 +931,11 @@ function calculate() {
 }
 
 function startFragen(){
-    const container = document.getElementById("question-container");
+    const main = document.querySelector("main");
+    main.innerHTML = "";
+    const container = document.createElement("section");
+    container.id = "question-container";
+    main.appendChild(container);
     container.innerHTML = "";
     localStorage.clear();
 
@@ -1032,7 +1036,7 @@ function showErgebnis(){
         });
         container.innerHTML += inhalt
     }  
-    const body = document.querySelector("body");
+    const body = document.querySelector("main");
     body.appendChild(container);
 }
 
