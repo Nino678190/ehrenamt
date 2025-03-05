@@ -937,6 +937,10 @@ function startFragen(){
     container.id = "question-container";
     main.appendChild(container);
     container.innerHTML = "";
+    if (localStorage.getItem("questionId") != null){
+        addQuestionToUser();
+        return;
+    }
     localStorage.clear();
 
     localStorage.setItem("questionId", 0);
