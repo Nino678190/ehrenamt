@@ -1050,12 +1050,35 @@ function showErgebnis(){
     body.appendChild(container);
 }
 
+function calcWidth(){
+    const windowWidth = window.innerWidth;
+    if (windowWidth < 479){
+        return 1;
+    }
+    if (windowWidth < 767){
+        return 2;
+    }
+    if (windowWidth < 1023){
+        return 3;
+    }
+    if (windowWidth < 1279){
+        return 4;
+    }
+    return 5;
+}
+
+function calculateSize(){
+    const image = document.querySelector(".orgaBild");
+    const width = calcWidth();
+    image.style.width = width * 100 + 50 + "px";
+}
+
 function showOrga(){
     const id = window.location.search.split("=")[1];
     const org = ergebnisse[id];
     const container = document.getElementById("orga-container-solo");
     container.innerHTML = `
-        <img src="${org.bild}" alt="Bild der ${org.organisation}">
+        <img src="${org.bild}" alt="Bild der ${org.organisation}" class="orgaBild">
         <h2>${org.organisation}</h2>
         <section class="OrgaKontakt">
         `

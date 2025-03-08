@@ -124,6 +124,11 @@ main{
     margin-top: var(--main-margin-xl);
 }
 
+.orgaBild{
+    height: 30%;
+    aspect-ratio: 16 / 9;
+}
+
 #question-container{
     display: flex;
     justify-content: center;
