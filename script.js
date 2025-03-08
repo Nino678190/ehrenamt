@@ -892,7 +892,8 @@ function back(){
     const questionId = localStorage.getItem("questionId");
     const newQuestionId = parseInt(questionId) - 1;
     localStorage.setItem("questionId", newQuestionId);
-    if (newQuestionId === 0){
+    if (newQuestionId === 0 || newQuestionId === -1){
+        localStorage.clear();
         startFragen();
     } else {
         const id = parseInt(localStorage.getItem("questionId")) - 1;
@@ -939,7 +940,10 @@ function startFragen(){
     container.id = "question-container";
     main.appendChild(container);
     container.innerHTML = "";
-    if (localStorage.getItem("questionId") != null){
+    if (localStorage.getItem("questionId") === -1 ){
+        localStorage.clear();
+    }
+    if (localStorage.getItem("questionId") != null ){
         addQuestionToUser();
         return;
     }
@@ -1049,21 +1053,31 @@ function showErgebnis(){
 function showOrga(){
     const id = window.location.search.split("=")[1];
     const org = ergebnisse[id];
-    const container = document.getElementById("orga-container");
+    const container = document.getElementById("orga-container-solo");
     container.innerHTML = `
         <img src="${org.bild}" alt="Bild der ${org.organisation}">
         <h2>${org.organisation}</h2>
         <section class="OrgaKontakt">
-            <a href="mailto:${org.email}">Mail</a>
-            <a href="tel:${org.telefon}">Anrufen</a>
-            <a href="${org.webseite}" target="_blank">Webseite</a>
-            <p>Adresse: ${org.addresse}</p>
+        `
+        if (org.email){
+            container.innerHTML += `<a href="mailto:${org.email}">Mail</a>`
+        }
+        if (org.telefon){
+            container.innerHTML += `<a href="tel:${org.telefon}">Anrufen</a>`
+        }
+        if (org.webseite){
+            container.innerHTML += `<a href="${org.webseite}" target="_blank">Webseite</a>`
+        }
+        if (org.addresse){
+            container.innerHTML += `<p>Adresse: ${org.addresse}</p>`
+        }
+        container.innerHTML += `
         </section>
         <section class="OrgaFakten<">
             <h3>Fakten</h3>
             <p>Gründung: ${org.gruendung}</p><br>
             <p>Mitgliederzahl: ${org.mitglieder}</p><br>
-            <p>Anzahl der Ortsverbände${org.ortsverbaendeAnzahl}</p><br>
+            <p>Anzahl der Ortsverbände: ${org.ortsverbaendeAnzahl}</p><br>
             <p>Kategorie: ${org.kategorie}</p><br>
         </section>
         <section class="OrgaBeschreibung">

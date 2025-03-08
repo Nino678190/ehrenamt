@@ -38,10 +38,33 @@ body {
     margin: 0;
     padding: 0;
     transition: background-color var(--main-transition);
+    min-height: 100vh;
+    height: fit-content;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--main-card-bg-color);
+    padding: 10px;
+    box-shadow: var(--main-box-shadow);
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--main-margin-m);
+}
+
+li{
+    list-style-type: none;
 }
 
 a {
     color: var(--main-link-color);
+    text-decoration: none;
 }
 
 a:hover {
@@ -51,6 +74,24 @@ a:hover {
 
 h1, h2, h3, h4, h5, h6 {
     color: var(--main-accent);
+}
+
+button {
+    background-color: var(--main-accent);
+    color: var(--main-text-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--main-border-radius);
+    cursor: pointer;
+    transition: background-color var(--main-transition);
+}
+
+button:hover {
+    background-color: #0A9FC7;
+}
+
+button:active {
+    background-color: #0A9FC7;
 }
 
 .ergebnis{
@@ -95,3 +136,31 @@ main{
     width: 85%;
     height: 60dvh;
 }
+
+#orga-container-solo{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: var(--main-margin-xl);
+    padding: var(--main-margin-xs);
+}
+
+/*Large Desktop, TV, etc.*/
+@media screen and (min-width: 1200px) {
+    body{
+        font-size: 1.2rem;
+    }
+}
+
+/*Tablet landscape, laptop, Desktop*/
+@media screen and (min-width: 992px) and (max-width: 1199px) {}
+
+/*Tablet portrait*/
+@media screen and (min-width: 767px) and (max-width: 991px) {}
+
+/*mobile landscape*/
+@media screen and (max-width: 480px) and (min-width: 766px) {}
+
+@media screen and (max-width: 479px) {}
