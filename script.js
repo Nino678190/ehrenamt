@@ -587,7 +587,7 @@ const ergebnisse = [
     {
         organisation: "Die Tafel",
         beschreibung: "Soziale Einrichtung, welche Menschen mit Lebensmitteln versorgt",
-        bild: "/images/tafel.jpg",
+        bild: "images/tafel.jpg",
         gruendung: "1993",
         mitglieder: "92.000",
         webseite: "https://berliner-tafel.de",
@@ -609,7 +609,7 @@ const ergebnisse = [
     {
         organisation: "BdP",
         beschreibung: "Soziales Engegement bei Pfadfinder und fördert Gemeinschaft",
-        bild: "/images/bdp.jpg",
+        bild: "images/bdp.jpg",
         gruendung: "1948",
         mitglieder: "80.000",
         webseite: "https://pfadfinden.de",
@@ -631,7 +631,7 @@ const ergebnisse = [
     {
         organisation: "DRK",
         beschreibung: "Das DRK ist eine Hilfsorganisation, welche sich für Menschen in Not einsetzt. Das DRK bietet viele verschiedene Dienste an, wie z.B. Rettungsdienst, Katastrophenschutz, Erste-Hilfe-Kurse und soziale Dienste.",
-        bild: "/images/drk.jpg",
+        bild: "images/drk.jpg",
         gruendung: "25. Januar 1921",
         mitglieder: "3.000.000 Deutschland",
         webseite: "https://drk-berlin.de",
@@ -653,7 +653,7 @@ const ergebnisse = [
     {
         organisation: "THW",
         beschreibung: "Das Technische Hilfswerk, kurz THW, ist eine Zivilschutzbehörde, die sich auf technisch-humanitäre Hilfeleistungen im Zivil- und Katastrophenschutz spezialisiert.",
-        bild: "/images/thw.jpg",
+        bild: "images/thw.jpg",
         gruendung: "22. August 1950",
         mitglieder: "88.000",
         webseite: "https://thw.de",
@@ -690,7 +690,7 @@ const ergebnisse = [
     {
         organisation: "FFW",
         beschreibung: "Die Freiwillige Feuerwehr ist eine öffentliche Feuerwehr, die sich hauptsächlich aus ehrenamtlichen Mitgliedern zusammensetzt. Zu ihren Aufgaben gehört unter anderem Brandbekämpfung, technische Hilfeleistung und Bürgerschutz.",
-        bild: "/images/BF_logo.png",
+        bild: "images/BF_logo.png",
         gruendung: "1. Feburuar 1851",
         mitglieder: "1600",
         webseite: "https://berliner-feuerwehr.de/ueber-uns/freiwillige-feuerwehr",
@@ -727,7 +727,7 @@ const ergebnisse = [
     {
         organisation: "OKFN",
         beschreibung: "Die Open-Knowledge-Foundation setzt sich für offenes Wissen und demokratische Teilhabe ein. Dafür entwickeln Sie Technologien und Instrumente, mit dem Ziel die Zivilgesellschaft zu stärken.",
-        bild: "/images/jh.jpg",
+        bild: "images/jh.jpg",
         gruendung: "2011",
         mitglieder: "46",
         webseite: "https://okfn.de",
@@ -749,7 +749,7 @@ const ergebnisse = [
     {
         organisation: "DLRG",
         beschreibung: "Die Deutsche Lebens-Rettungs-Gesellschaft bildet Kinder, Jugendliche und Erwachsene im schwimmen aus. Diese Schwimmausbildung wird von ehrenamtlichen Helfern übernommen. Zudem betreibt die DLRG einen Großteil der Wasserrettungsstationen in Deutschland. Die DLRG bildet dafür auch Rettungsschwimmer aus, welche ehrenamtlich dort arbeiten.",
-        bild: "/images/dlrg.jpg",
+        bild: "images/dlrg.jpg",
         gruendung: "19. Oktober 1931",
         mitglieder: "1.900.000",
         webseite: "https://dlrg.de",
@@ -793,7 +793,7 @@ const ergebnisse = [
     {
         organisation: "Bahnhofsmission",
         beschreibung: "Die Bahnhofsmission ist eine ehrenamtliche Organisation, welche an Bahnhöfen alle Menschen unterstützt und auch Schutzbedürftigen Schutz bieten. Zudem unterstützen Sie Menschen in jeder Lebenslage.",
-        bild: "/images/bahnhofsmission.jpg",
+        bild: "images/bahnhofsmission.jpg",
         gruendung: "1910",
         mitglieder: "2.400",
         webseite: "https://berliner-stadtmission.de/bahnhofsmission",
@@ -815,7 +815,7 @@ const ergebnisse = [
     {
         organisation: "Malteser",
         beschreibung: "Die Malteser sind eine katholische Hilfsorganisation, welche sich für Menschen in Not einsetzt. Die Malteser bieten viele verschiedene Dienste an, wie z.B. Rettungsdienst, Katastrophenschutz, Erste-Hilfe-Kurse und soziale Dienste.",
-        bild: "/images/malteser.jpg",
+        bild: "images/malteser.jpg",
         gruendung: "1953",
         mitglieder: "99.000",
         webseite: "https://malteser.de",
@@ -837,7 +837,7 @@ const ergebnisse = [
     {
         organisation: "Kältebus",
         beschreibung: "Der Kältebus ist ein mobiles Hilfsangebot für obdachlose Menschen in Berlin. Der Kältebus fährt in den Wintermonaten durch Berlin und versorgt obdachlose Menschen mit warmen Getränken, Decken und Kleidung. Zudem bietet der Kältebus auch Gespräche und Hilfe an.",
-        bild: "/images/kaeltebus.jpg",
+        bild: "images/kaeltebus.jpg",
         gruendung: "1994",
         mitglieder: "5+",
         webseite: "https://berliner-stadtmission.de/kaeltehilfe",
