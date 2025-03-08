@@ -152,6 +152,13 @@ main{
     padding: var(--main-margin-xs);
 }
 
+.orga-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 /*Large Desktop, TV, etc.*/
 @media screen and (min-width: 1200px) {
     body{
