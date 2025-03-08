@@ -1051,7 +1051,7 @@ function showErgebnis(){
 }
 
 function calcWidth(){
-    const windowWidth = window.innerWidth;
+    const windowWidth = window.innerHeight;
     if (windowWidth < 479){
         return 1;
     }
@@ -1070,7 +1070,7 @@ function calcWidth(){
 function calculateSize(){
     const image = document.querySelector(".orgaBild");
     const width = calcWidth();
-    image.style.width = width * 100 + 50 + "px";
+    image.style.height = width * 100 + 50 + "px";
 }
 
 function showOrga(){
