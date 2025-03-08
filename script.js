@@ -1108,6 +1108,7 @@ function showOrga(){
             <p>${org.beschreibung}</p>
         </section>
     `
+    calculateSize();
 }
 
 function allOrga(){
