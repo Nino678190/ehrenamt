@@ -1166,24 +1166,30 @@ function showOrga() {
     }
 }
 
-function allOrga(){
+function allOrga() {
     const container = document.getElementById("orga-container");
-    const organisation = ergebnisse;
-    for (let i = 0; i < organisation.length; i++) {
+    if (!container) {
+        console.error("Container element not found");
+        return;
+    }
+    container.innerHTML = '';
+    ergebnisse.forEach((org, index) => {
         const inhalt = document.createElement("section");
         inhalt.classList.add("ergebnis");
+
         inhalt.innerHTML = `
             <section class="orgaHead">
-                <h2>${organisation[i].organisation}</h2>
-                <a href="${organisation[i].webseite}">&#127760;</a>
+                <h2>${org.organisation}</h2>
             </section>
             <section>
-                <p>${organisation[i].beschreibung}</p>
+                <p>${org.beschreibung}</p>
             </section>
-        `
-        inhalt.addEventListener("click", function () {
-            window.location.href = "orga.html?id=" + i;
+        `;
+
+        inhalt.addEventListener("click", () => {
+            window.location.href = `orga.html?id=${index}`;
         });
-        container.innerHTML += inhalt
-    }
+
+        container.appendChild(inhalt);
+    });
 }
