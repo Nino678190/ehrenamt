@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function(){
     const id = localStorage.getItem("questionId");
     const header = document.querySelector("header");
     header.innerHTML =`
-        <img src="logo.png" alt="Logo">
+        <img src="images/logo.png" alt="Logo">
         <nav>
             <ul>
                 <li><a href="index.html">Umfrage</a></li>
