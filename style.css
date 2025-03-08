@@ -159,6 +159,21 @@ main{
     flex-wrap: wrap;
 }
 
+.OrgaKontakt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--main-margin-m);
+    flex-direction: row;
+}
+
+.OrgaFakten{
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
 /*Large Desktop, TV, etc.*/
 @media screen and (min-width: 1200px) {
     body{

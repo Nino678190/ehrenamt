@@ -1073,42 +1073,97 @@ function calculateSize(){
     image.style.height = width * 100 + 50 + "px";
 }
 
-function showOrga(){
-    const id = window.location.search.split("=")[1];
+function showOrga() {
+    // Validate id parameter
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    // Check if id exists and is valid
+    if (!id || id < 0 || id >= ergebnisse.length) {
+        console.error("Invalid organization ID");
+        return;
+    }
+
     const org = ergebnisse[id];
     const container = document.getElementById("orga-container-solo");
-    container.innerHTML = `
-        <img src="${org.bild}" alt="Bild der ${org.organisation}" class="orgaBild">
-        <h2>${org.organisation}</h2>
+
+    if (!container) {
+        console.error("Container element not found");
+        return;
+    }
+
+    // Helper function to sanitize content
+    const sanitize = (str) => {
+        if (!str) return '';
+        return String(str)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#039;');
+    };
+
+    // Build HTML with sanitized values and null checks
+    let html = `
+        <img src="${sanitize(org.bild || '')}" 
+             alt="Bild der ${sanitize(org.organisation || '')}" 
+             class="orgaBild">
+        <h2>${sanitize(org.organisation || '')}</h2>
         <section class="OrgaKontakt">
-        `
-        if (org.email){
-            container.innerHTML += `<a href="mailto:${org.email}">Mail</a>`
-        }
-        if (org.telefon){
-            container.innerHTML += `<a href="tel:${org.telefon}">Anrufen</a>`
-        }
-        if (org.webseite){
-            container.innerHTML += `<a href="${org.webseite}" target="_blank">Webseite</a>`
-        }
-        if (org.addresse){
-            container.innerHTML += `<p>Adresse: ${org.addresse}</p>`
-        }
-        container.innerHTML += `
+    `;
+
+    // Add contact links only if they exist
+    if (org.email) {
+        html += `<a href="mailto:${sanitize(org.email)}"><img src="images/icons8-mail-100(1).png" alt="Email"></a>`;
+    }
+
+    if (org.telefon) {
+        html += `<a href="tel:${sanitize(org.telefon)}"><img src="images/icons8-phone-100.png" alt="Anrufen"></a>`;
+    }
+
+    if (org.webseite) {
+        html += `<a href="${sanitize(org.webseite)}" target="_blank" rel="noopener noreferrer"><img src="images/icons8-external-link-100.png" alt="Webseite"></a>`;
+    }
+
+    html += `
         </section>
-        <section class="OrgaFakten<">
+        <section class="OrgaFakten">
+            <p>Adresse: ${sanitize(org.addresse || '')}</p>
             <h3>Fakten</h3>
-            <p>Gründung: ${org.gruendung}</p><br>
-            <p>Mitgliederzahl: ${org.mitglieder}</p><br>
-            <p>Anzahl der Ortsverbände: ${org.ortsverbaendeAnzahl}</p><br>
-            <p>Kategorie: ${org.kategorie}</p><br>
+            <p>Gründung: ${sanitize(org.gruendung || '')}</p><br>
+            <p>Mitgliederzahl: ${sanitize(org.mitglieder || '')}</p><br>
+            <p>Anzahl der Ortsverbände: ${sanitize(org.ortsverbaendeAnzahl || '0')}</p><br>
+            <p>Kategorie: ${sanitize(org.kategorie || '')}</p><br>
         </section>
         <section class="OrgaBeschreibung">
             <h3>Beschreibung</h3>
-            <p>${org.beschreibung}</p>
+            <p>${sanitize(org.beschreibung || '')}</p>
         </section>
-    `
-    calculateSize();
+        <section class="OrgaSkills">
+            <h3>Skills die man lernen kann</h3>
+            <ul>
+                ${org.skillsLernen && org.skillsLernen.length > 0
+            ? org.skillsLernen.map(skill => `<li>${sanitize(skill)}</li>`).join('')
+            : '<li>Keine Skills</li>'}
+            </ul>
+            <h3>Skills mitbringen</h3>
+            <ul>
+                ${org.skillsMitbringen && org.skillsMitbringen.length > 0
+            ? org.skillsMitbringen.map(skill => `<li>${sanitize(skill)}</li>`).join('')
+            : '<li>Keine Skills</li>'}
+            </ul>
+        </section>
+    `;
+
+    // Set the sanitized HTML content
+    container.innerHTML = html;
+
+    // Calculate size after content is loaded
+    try {
+        calculateSize();
+    } catch (error) {
+        console.error("Error calculating size:", error);
+    }
 }
 
 function allOrga(){
