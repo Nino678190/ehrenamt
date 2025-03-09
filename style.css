@@ -192,20 +192,50 @@ main{
     gap: var(--main-margin-m);
 }
 
+.answer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--main-margin-m);
+    margin-top: var(--main-margin-xl);
+    flex-direction: row;
+}
+
+.answer>input{
+    width: 10rem;
+}
+
 /*Large Desktop, TV, etc.*/
 @media screen and (min-width: 1200px) {
     body{
         font-size: 1.2rem;
     }
+
+    .answer>input {
+        width: 50rem;
+    }
 }
 
 /*Tablet landscape, laptop, Desktop*/
-@media screen and (min-width: 992px) and (max-width: 1199px) {}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .answer>input {
+        width: 45rem;
+    }
+}
 
 /*Tablet portrait*/
-@media screen and (min-width: 767px) and (max-width: 991px) {}
+@media screen and (min-width: 767px) and (max-width: 991px) {
+    .answer>input {
+        width: 35rem;
+    }
+}
 
 /*mobile landscape*/
-@media screen and (max-width: 480px) and (min-width: 766px) {}
+@media screen and (min-width: 480px) and (max-width: 766px) {
+    .answer>input {
+        width: 20rem;
+    }
+}
 
 @media screen and (max-width: 479px) {}

@@ -879,7 +879,11 @@ function addQuestionToUser(){
         <section class="question">
             <h2>${question.frage}</h2>
         </section>
-        <input type="range" name="answer" value="0.5" min="0" max="1" step="0.25" id="answer"><br>
+        <section class="answer">
+            <p>Gar nicht</p>
+            <input type="range" name="answer" value="0.5" min="0" max="1" step="0.25" id="answer">
+            <p>Sehr</p>
+        </section>
         <section class="buttons">
             <button onclick="back()">Zurück</button>
             <button onclick="calculate()">Weiter</button>
