@@ -870,9 +870,7 @@ function addQuestionToUser(){
         endFragen();
         return;
     }
-    console.log(id);
     const question = questions[id];
-    console.log(question);
     const container = document.getElementById("question-container");
     container.innerHTML = "";
     container.innerHTML = `
@@ -912,12 +910,6 @@ function calculate() {
     const answer = parseFloat(document.getElementById('answer').value);
     const id = localStorage.getItem("questionId");
     const question = questions[id];
-    console.log('kind', localStorage.getItem('kind'));
-    console.log('erwachsen', localStorage.getItem('erwachsen'));
-    console.log('sport', localStorage.getItem('sport'));
-    console.log('rettung', localStorage.getItem('rettung'));
-    console.log('hilfsorga', localStorage.getItem('hilfsorga'));
-    console.log('gemeinschaft', localStorage.getItem('gemeinschaft'));
 
     const categories = ["kind", "erwachsen", "sport", "rettung", "hilfsorga", "gemeinschaft"];
     const answerSuffix = answer === 0 ? "" : answer === 0.25 ? "1" : answer === 0.5 ? "2" : answer === 0.75 ? "3" : "4";
