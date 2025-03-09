@@ -4,7 +4,9 @@ document.addEventListener("DOMContentLoaded", function(){
     const id = localStorage.getItem("questionId");
     const header = document.querySelector("header");
     header.innerHTML =`
-        <img src="images/logo.png" alt="Logo">
+        <a href="index.html">
+            <img src="images/logo.png" alt="Logo">
+        </a>
         <nav>
             <ul>
                 <li><a href="index.html">Umfrage</a></li>
@@ -1074,12 +1076,10 @@ function calculateSize(){
 }
 
 function showOrga() {
-    // Validate id parameter
     const params = new URLSearchParams(window.location.search);
     const id = params.get("id");
 
-    // Check if id exists and is valid
-    if (!id || id < 0 || id >= ergebnisse.length) {
+    if (!id || id < 0 || id >= ergebnisse.length || isNaN(id)) {
         console.error("Invalid organization ID");
         return;
     }
@@ -1092,73 +1092,58 @@ function showOrga() {
         return;
     }
 
-    // Helper function to sanitize content
-    const sanitize = (str) => {
-        if (!str) return '';
-        return String(str)
-            .replace(/&/g, '&amp;')
-            .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt;')
-            .replace(/"/g, '&quot;')
-            .replace(/'/g, '&#039;');
-    };
-
-    // Build HTML with sanitized values and null checks
     let html = `
-        <img src="${sanitize(org.bild || '')}" 
-             alt="Bild der ${sanitize(org.organisation || '')}" 
-             class="orgaBild">
-        <h2>${sanitize(org.organisation || '')}</h2>
+        <img src="${org.bild}" alt="Bild der ${org.organisation}" class="orgaBild">
+        <h2>${org.organisation}</h2>
         <section class="OrgaKontakt">
     `;
 
-    // Add contact links only if they exist
     if (org.email) {
-        html += `<a href="mailto:${sanitize(org.email)}"><img src="images/icons8-mail-100(1).png" alt="Email"></a>`;
+        html += `<a href="mailto:${org.email}"><img src="images/icons8-mail-100(1).png" alt="Email"></a>`;
     }
 
     if (org.telefon) {
-        html += `<a href="tel:${sanitize(org.telefon)}"><img src="images/icons8-phone-100.png" alt="Anrufen"></a>`;
+        html += `<a href="tel:${org.telefon}"><img src="images/icons8-phone-100.png" alt="Anrufen"></a>`;
     }
 
     if (org.webseite) {
-        html += `<a href="${sanitize(org.webseite)}" target="_blank" rel="noopener noreferrer"><img src="images/icons8-external-link-100.png" alt="Webseite"></a>`;
+        html += `<a href="${org.webseite}" target="_blank" rel="noopener noreferrer"><img src="images/icons8-external-link-100.png" alt="Webseite"></a>`;
     }
 
     html += `
         </section>
         <section class="OrgaFakten">
-            <p>Adresse: ${sanitize(org.addresse || '')}</p>
+            <p>Adresse: ${org.addresse}</p>
             <h3>Fakten</h3>
-            <p>Gründung: ${sanitize(org.gruendung || '')}</p><br>
-            <p>Mitgliederzahl: ${sanitize(org.mitglieder || '')}</p><br>
-            <p>Anzahl der Ortsverbände: ${sanitize(org.ortsverbaendeAnzahl || '0')}</p><br>
-            <p>Kategorie: ${sanitize(org.kategorie || '')}</p><br>
+            <p>Gründung: ${org.gruendung}</p><br>
+            <p>Mitgliederzahl: ${org.mitglieder}</p><br>
+            <p>Anzahl der Ortsverbände: ${org.ortsverbaendeAnzahl}</p><br>
+            <p>Kategorie: ${org.kategorie}</p><br>
         </section>
         <section class="OrgaBeschreibung">
             <h3>Beschreibung</h3>
-            <p>${sanitize(org.beschreibung || '')}</p>
+            <p>${org.beschreibung}</p>
         </section>
         <section class="OrgaSkills">
             <h3>Skills die man lernen kann</h3>
             <ul>
                 ${org.skillsLernen && org.skillsLernen.length > 0
-            ? org.skillsLernen.map(skill => `<li>${sanitize(skill)}</li>`).join('')
+            ? org.skillsLernen.map(skill => `<li>${skill}</li>`).join('')
             : '<li>Keine Skills</li>'}
             </ul>
             <h3>Skills mitbringen</h3>
             <ul>
                 ${org.skillsMitbringen && org.skillsMitbringen.length > 0
-            ? org.skillsMitbringen.map(skill => `<li>${sanitize(skill)}</li>`).join('')
+            ? org.skillsMitbringen.map(skill => `<li>${skill}</li>`).join('')
             : '<li>Keine Skills</li>'}
             </ul>
         </section>
+        <footer>
+            <p>Icons from <a href="https://icons8.com">Icons8</a></p>
+        </footer>
     `;
 
-    // Set the sanitized HTML content
     container.innerHTML = html;
-
-    // Calculate size after content is loaded
     try {
         calculateSize();
     } catch (error) {
