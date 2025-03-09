@@ -970,18 +970,7 @@ function startFragen(){
     `
 }
 
-function endFragen(){
-    const container = document.getElementById("question-container");
-    container.innerHTML = `
-        <h2>Vielen Dank für die Teilnahme!</h2>
-        <p>Die Ergebnisse werden nun berechnet.</p>
-        <button onclick="showErgebnis()">Ergebnis anzeigen</button>
-        <button onclick="startFragen()">Neue Umfrage</button>
-    `
-
-}
-
-function showErgebnis(){
+function endFragen() {
     const kind = localStorage.getItem("kind");
     const erwachsen = localStorage.getItem("erwachsen");
     const sport = localStorage.getItem("sport");
@@ -990,69 +979,71 @@ function showErgebnis(){
     const gemeinschaft = localStorage.getItem("gemeinschaft");
 
     const container = document.createElement('section');
-    let ergebnis = [];
-    for (let i = 0; i < ergebnisse.length; i++) {
-        const org = ergebnisse[i];
-        const match1 = Math.abs(kind - org.kind);
-        const match2 = Math.abs(erwachsen - org.erwachsen);
-        const match3 = Math.abs(sport - org.sport);
-        const match4 = Math.abs(rettung - org.rettung);
-        const match5 = Math.abs(hilfsorga - org.hilfsorga);
-        const match6 = Math.abs(gemeinschaft - org.gemeinschaft);
-        const totalMatch = match1 + match2 + match3 + match4 + match5 + match6;
-    
-        ergebnis.push({
-            organisation: org,
-            uebereinstimmung: totalMatch,
-            match1: match1,
-            match2: match2,
-            match3: match3,
-            match4: match4,
-            match5: match5,
-            match6: match6
-        });
-    }
-    ergebnis.sort((a, b) => a.uebereinstimmung - b.uebereinstimmung);
-    let kindProzent = Math.round(kind/14*100);
-    let erwachsenProzent = Math.round(erwachsen/14*100);
-    let sportProzent = Math.round(sport/14*100);
-    let rettungProzent = Math.round(rettung/14*100);
-    let hilfsorgaProzent = Math.round(hilfsorga/14*100);
-    let gemeinschaftProzent = Math.round(gemeinschaft/14*100);
 
-    container.innerHTML = "";
+    let ergebnis = ergebnisse.map((org, index) => {
+        const matches = {
+            kind: Math.abs(kind - org.kind),
+            erwachsen: Math.abs(erwachsen - org.erwachsen),
+            sport: Math.abs(sport - org.sport),
+            rettung: Math.abs(rettung - org.rettung),
+            hilfsorga: Math.abs(hilfsorga - org.hilfsorga),
+            gemeinschaft: Math.abs(gemeinschaft - org.gemeinschaft)
+        };
+
+        return {
+            organisation: org,
+            uebereinstimmung: Object.values(matches).reduce((a, b) => a + b, 0),
+            index
+        };
+    }).sort((a, b) => a.uebereinstimmung - b.uebereinstimmung);
+
+    const prozente = {
+        kind: Math.round(kind / 14 * 100),
+        erwachsen: Math.round(erwachsen / 14 * 100),
+        sport: Math.round(sport / 14 * 100),
+        rettung: Math.round(rettung / 14 * 100),
+        hilfsorga: Math.round(hilfsorga / 14 * 100),
+        gemeinschaft: Math.round(gemeinschaft / 14 * 100)
+    };
+
     container.innerHTML = `
         <h2>Dein passendes Ehrenamt</h2>
         <section>
-            <h4>${kindProzent}% Mit Kindern/Jugendlichen</h4>
-            <h4>${erwachsenProzent}% Mit Erwachsenen</h4>
-            <h4>${sportProzent}% Sportlich</h4>
-            <h4>${rettungProzent}% In der Rettung</h4>
-            <h4>${hilfsorgaProzent}% In einer Hilfsorganisation</h4>
-            <h4>${gemeinschaftProzent}% Gemeinschaftlich</h4>
+            <h4>${prozente.kind}% Mit Kindern/Jugendlichen</h4>
+            <h4>${prozente.erwachsen}% Mit Erwachsenen</h4>
+            <h4>${prozente.sport}% Sportlich</h4>
+            <h4>${prozente.rettung}% In der Rettung</h4>
+            <h4>${prozente.hilfsorga}% In einer Hilfsorganisation</h4>
+            <h4>${prozente.gemeinschaft}% Gemeinschaftlich</h4>
         </section>
-    `
-    for (let i = 0; i < ergebnis.length; i++) {
+    `;
+
+    ergebnis.forEach(({ organisation: org, uebereinstimmung, index }) => {
         const inhalt = document.createElement("section");
         inhalt.classList.add("ergebnis");
+
         inhalt.innerHTML = `
             <section>
-            <h2>${ergebnis[i].organisation.organisation}</h2>
-            <a href="${ergebnis[i].organisation.webseite}">&#127760;</a>
+                <h2>${org.organisation}</h2>
+                <a href="${org.webseite}">&#127760;</a>
             </section>
             <section>
-            <h4>Die Organisation deckt sich zu ${Math.round(100 - (ergebnis[i].uebereinstimmung / 3))}% mit deinen Angaben</h4>
+                <h4>Die Organisation deckt sich zu ${Math.round(100 - (uebereinstimmung / 3))}% mit deinen Angaben</h4>
             </section>
             <section>
-            <p>${ergebnis[i].organisation.beschreibung}</p>
+                <p>${org.beschreibung}</p>
             </section>
-        `
-        inhalt.addEventListener("click", function(){
-            window.location.href = "orga.html?id=" + i;
+        `;
+
+        inhalt.addEventListener("click", () => {
+            window.location.href = `orga.html?id=${index}`;
         });
-        container.innerHTML += inhalt
-    }  
+
+        container.appendChild(inhalt);
+    });
+
     const body = document.querySelector("main");
+    body.innerHTML = '';
     body.appendChild(container);
 }
 

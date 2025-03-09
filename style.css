@@ -182,6 +182,7 @@ main{
     gap: var(--main-margin-m);
     margin-top: var(--main-margin-xl);
     flex-direction: column;
+    cursor: pointer;
 }
 
 .ergebnis>section{
