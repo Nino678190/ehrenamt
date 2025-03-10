@@ -25,6 +25,7 @@
     :root {
         --main-background: #111111;
         --main-text-color: #FCFCFC;
+        --main-second-text-color: #ffffff;
         --main-card-bg-color: #424B54;
         --main-border-color: #414141;
         --main-link-color: lightblue;
@@ -90,7 +91,7 @@ button {
     border-radius: var(--main-border-radius);
     cursor: pointer;
     transition: background-color var(--main-transition);
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 button:hover {
