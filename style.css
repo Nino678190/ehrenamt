@@ -1,11 +1,12 @@
 :root {
     --main-background: #FCFCFC;
     --main-text-color: #111111;
-    --main-card-bg-color: #424B54;
-    --main-border-color: #414141;
-    --main-link-color: lightblue;
+    --main-second-text-color: #d4d4d4;
+    --main-card-bg-color: #acc0d4;
+    --main-border-color: #acc0d4;
+    --main-link-color: #085b68;
     --main-card-background: #212121;
-    --main-accent: #0DC1DC;
+    --main-accent: #085b68;
     accent-color: var(--main-accent);
     --main-border-radius: 5px;
     --big-border-radius: 20px;
@@ -78,12 +79,13 @@ h1, h2, h3, h4, h5, h6 {
 
 button {
     background-color: var(--main-accent);
-    color: var(--main-text-color);
+    color: var(--main-second-text-color);
     border: none;
     padding: 10px 20px;
     border-radius: var(--main-border-radius);
     cursor: pointer;
     transition: background-color var(--main-transition);
+    font-size: 1rem;
 }
 
 button:hover {
