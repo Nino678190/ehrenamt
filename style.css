@@ -33,6 +33,11 @@
     }
 }
 
+::selection {
+    background-color: var(--main-accent);
+    color: var(--main-text-color);
+}
+
 body {
     background-color: var(--main-background);
     color: var(--main-text-color);
