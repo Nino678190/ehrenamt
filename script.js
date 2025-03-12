@@ -663,7 +663,7 @@ const ergebnisse = [
         email: "mitmachen@thw-steglitz.de",
         addresse: "",
         ortsverbaendeAnzahl: 0,
-        kategorie: "",
+        kategorie: "Hilfsorganisation",
         skillsLernen: [
             "Technische Fertigkeiten",
             "Fahrzeug- und Gerätebedienung",
@@ -825,7 +825,7 @@ const ergebnisse = [
         email: "info.berlin@malteser.org",
         addresse: "",
         ortsverbaendeAnzahl: 0,
-        kategorie: "",
+        kategorie: "Rettung",
         skillsLernen: ["Stresssituationen bewältigen", "Erste Hilfe", "Teamarbeit"],
         skillsMitbringen: [],
 
@@ -931,6 +931,19 @@ function calculate() {
     }
 }
 
+function resetQuiz(){
+    localStorage.clear();
+
+    localStorage.setItem("questionId", 0);
+    localStorage.setItem("kind", 0);
+    localStorage.setItem("erwachsen", 0);
+    localStorage.setItem("sport", 0);
+    localStorage.setItem("rettung", 0);
+    localStorage.setItem("hilfsorga", 0);
+    localStorage.setItem("gemeinschaft", 0);
+    startFragen()
+}
+
 function startFragen(){
     const main = document.querySelector("main");
     main.innerHTML = "";
@@ -990,12 +1003,12 @@ function endFragen() {
     }).sort((a, b) => a.uebereinstimmung - b.uebereinstimmung);
 
     const prozente = {
-        kind: Math.round(kind / 14 * 100),
-        erwachsen: Math.round(erwachsen / 14 * 100),
-        sport: Math.round(sport / 14 * 100),
-        rettung: Math.round(rettung / 14 * 100),
-        hilfsorga: Math.round(hilfsorga / 14 * 100),
-        gemeinschaft: Math.round(gemeinschaft / 14 * 100)
+        kind: Math.round(kind / 9.5 * 100),
+        erwachsen: Math.round(erwachsen / 5.5 * 100),
+        sport: Math.round(sport / 5 * 100),
+        rettung: Math.round(rettung / 10 * 100),
+        hilfsorga: Math.round(hilfsorga / 10.5 * 100),
+        gemeinschaft: Math.round(gemeinschaft / 11.5 * 100)
     };
 
     container.innerHTML = `
