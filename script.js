@@ -661,7 +661,7 @@ const ergebnisse = [
         webseite: "https://thw.de",
         telefon: "0307755051",
         email: "mitmachen@thw-steglitz.de",
-        addresse: "",
+        addresse: "Gallwitzallee 123, 12249 Berlin",
         ortsverbaendeAnzahl: 0,
         kategorie: "Hilfsorganisation",
         skillsLernen: [
@@ -698,7 +698,7 @@ const ergebnisse = [
         webseite: "https://berliner-feuerwehr.de/ueber-uns/freiwillige-feuerwehr",
         telefon: "0303874100131",
         email: "ffzehlendorf@berliner-feuerwehr.de",
-        addresse: "",
+        addresse: "Charlottenburger Str. 10-12, 14169 Berlin",
         ortsverbaendeAnzahl: 59,
         kategorie: "Rettung",
         skillsLernen: [
@@ -772,25 +772,25 @@ const ergebnisse = [
     }, 
     {
         organisation: "Tierheim Berlin",
-        beschreibung: "",
+        beschreibung: "Mit einer Fläche von 16 Hektar ist das Tierheim Berlin so groß wie 22 Fußballfelder. Es gibt vier große Katzenhäuser, sechs große Hundehäuser, ein Kleintierhaus, ein Vogelhaus sowie ein großes Gehege für freilebende Katzen.",
         bild: "",
-        gruendung: "",
-        mitglieder: "",
-        webseite: "",
-        telefon: "",
-        email: "",
+        gruendung: "22. Juni 1901",
+        mitglieder: "15.000",
+        webseite: "https://tierschutz-berlin.de",
+        telefon: "03076888100",
+        email: "tierheim@tierschutz-berlin.de",
         addresse: "",
         ortsverbaendeAnzahl: 0,
-        kategorie: "",
+        kategorie: "Hilfsorganisation",
         skillsLernen: [],
         skillsMitbringen: [],
 
-        kind: 0,
-        erwachsen: 0,
-        sport: 0,
-        rettung: 0,
-        hilfsorga: 0,
-        gemeinschaft: 0
+        kind: 3,
+        erwachsen: 12,
+        sport: 5,
+        rettung: 10,
+        hilfsorga: 14,
+        gemeinschaft: 8
     }, 
     {
         organisation: "Bahnhofsmission",
@@ -858,6 +858,28 @@ const ergebnisse = [
         hilfsorga: 13,
         gemeinschaft: 9
     }, 
+    {
+        organisation: "Tierhilfe Hof Samtschnute",
+        beschreibung: "",
+        bild: "",
+        gruendung: "",
+        mitglieder: "",
+        webseite: "",
+        telefon: "",
+        email: "",
+        addresse: "",
+        ortsverbaendeAnzahl: 0,
+        kategorie: "",
+        skillsLernen: [],
+        skillsMitbringen: [],
+
+        kind: 0,
+        erwachsen: 10,
+        sport: 0,
+        rettung: 14,
+        hilfsorga: 13,
+        gemeinschaft: 9
+    },
 ]
 
 function addQuestionToUser(){
