@@ -615,10 +615,10 @@ const ergebnisse = [
         gruendung: "1948",
         mitglieder: "80.000",
         webseite: "https://pfadfinden.de",
-        telefon: "",
+        telefon: "0567399584",
         email: "bbb@pfadfinder.de",
-        addresse: "13",
-        ortsverbaendeAnzahl: 0,
+        addresse: "Kesselhaken 23, 34376 Immenhausen",
+        ortsverbaendeAnzahl: 13,
         kategorie: "Gemeinschaft",
         skillsLernen: ["Lernen Verantwortung zu übernehmen"],
         skillsMitbringen: [],
@@ -779,7 +779,7 @@ const ergebnisse = [
         webseite: "https://tierschutz-berlin.de",
         telefon: "03076888100",
         email: "tierheim@tierschutz-berlin.de",
-        addresse: "",
+        addresse: "Hausvaterweg 39, 13057 Berlin",
         ortsverbaendeAnzahl: 0,
         kategorie: "Hilfsorganisation",
         skillsLernen: [],
@@ -823,7 +823,7 @@ const ergebnisse = [
         webseite: "https://malteser.de",
         telefon: "0303480030",
         email: "info.berlin@malteser.org",
-        addresse: "",
+        addresse: "Alt-Lietzow 33, 10587 Berlin",
         ortsverbaendeAnzahl: 0,
         kategorie: "Rettung",
         skillsLernen: ["Stresssituationen bewältigen", "Erste Hilfe", "Teamarbeit"],
@@ -905,7 +905,7 @@ function addQuestionToUser(){
             <p>Sehr</p>
         </section>
         <section class="buttons">
-            <button onclick="back()">Zurück</button>
+            <!--- <button onclick="back()">Zurück</button> --->
             <button onclick="calculate()">Weiter</button>
         </section>
         <section>
