@@ -5,10 +5,10 @@ document.addEventListener("DOMContentLoaded", function(){
     const header = document.querySelector("header");
     header.innerHTML =`
         <a href="index.html">
-            <img src="images/logo.png" alt="Logo">
+            <img src="images/logo.png" alt="Logo" class='logo'>
         </a>
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html">Umfrage</a></li>
                 <li><a href="info.html">Informationen</a></li>
             </ul>
@@ -611,7 +611,7 @@ const ergebnisse = [
     {
         organisation: "BdP",
         beschreibung: "Soziales Engegement bei Pfadfinder und fördert Gemeinschaft",
-        bild: "images/bdp.jpg",
+        bild: "images/pp.jpeg",
         gruendung: "1948",
         mitglieder: "80.000",
         webseite: "https://pfadfinden.de",
@@ -692,7 +692,7 @@ const ergebnisse = [
     {
         organisation: "FFW",
         beschreibung: "Die Freiwillige Feuerwehr ist eine öffentliche Feuerwehr, die sich hauptsächlich aus ehrenamtlichen Mitgliedern zusammensetzt. Zu ihren Aufgaben gehört unter anderem Brandbekämpfung, technische Hilfeleistung und Bürgerschutz.",
-        bild: "images/BF_logo.png",
+        bild: "images/ff.jpeg",
         gruendung: "1. Feburuar 1851",
         mitglieder: "1600",
         webseite: "https://berliner-feuerwehr.de/ueber-uns/freiwillige-feuerwehr",
@@ -1119,7 +1119,7 @@ function calcWidth(){
 function calculateSize(){
     const image = document.querySelector(".orgaBild");
     const width = calcWidth();
-    image.style.height = width * 100 + 50 + "px";
+    image.style.height = width * 100 + 50 + "px !important";
 }
 
 function showOrga() {

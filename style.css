@@ -54,8 +54,8 @@ header{
     justify-content: space-between;
     align-items: center;
     background-color: var(--main-card-bg-color);
-    padding: 10px;
     box-shadow: var(--main-box-shadow);
+    width: 100%;
 }
 
 ul{
@@ -102,6 +102,17 @@ button:active {
     background-color: #0A9FC7;
 }
 
+p{
+    text-wrap: wrap;
+}
+
+.OrgaSkills>ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--main-margin-m);
+    flex: 1;
+}
+
 .ergebnis{
     color: var(--main-accent);
     display: flex;
@@ -133,8 +144,25 @@ main{
 }
 
 .orgaBild{
-    height: 30%;
     aspect-ratio: 16 / 9;
+    width: 80%;
+    
+}
+
+.orgaBildContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav{
+    padding: 10px;
+}
+
+.nav-links{
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
 #question-container{
@@ -215,6 +243,11 @@ main{
     width: 10rem;
 }
 
+.logo{
+    width: 150px;
+    height: 50px;
+}
+
 /*Large Desktop, TV, etc.*/
 @media screen and (min-width: 1200px) {
     body{
@@ -238,6 +271,7 @@ main{
     .answer>input {
         width: 35rem;
     }
+    
 }
 
 /*mobile landscape*/
@@ -247,4 +281,9 @@ main{
     }
 }
 
-@media screen and (max-width: 479px) {}
+@media screen and (max-width: 479px) {
+    header{
+        flex-direction: column;
+        justify-content: center;
+    }
+}
