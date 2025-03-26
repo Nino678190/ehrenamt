@@ -1042,7 +1042,7 @@ function endFragen() {
         };
     }).sort((a, b) => a.uebereinstimmung - b.uebereinstimmung);
 
-    const prozente = {
+    let prozente = {
         kind: Math.round(kind / 9.5 * 100),
         erwachsen: Math.round(erwachsen / 5.5 * 100),
         sport: Math.round(sport / 5 * 100),
@@ -1050,6 +1050,43 @@ function endFragen() {
         hilfsorga: Math.round(hilfsorga / 10.5 * 100),
         gemeinschaft: Math.round(gemeinschaft / 11.5 * 100)
     };
+
+    if (prozente.kind < 0){
+        prozente.kind = 0;
+    }
+    if (prozente.erwachsen < 0){
+        prozente.erwachsen = 0;
+    }
+    if (prozente.sport < 0){
+        prozente.sport = 0;
+    }
+    if (prozente.rettung < 0){
+        prozente.rettung = 0;
+    }
+    if (prozente.hilfsorga < 0){
+        prozente.hilfsorga = 0;
+    }
+    if (prozente.gemeinschaft < 0){
+        prozente.gemeinschaft = 0;
+    }
+    if (prozente.kind > 100){
+        prozente.kind = 100;
+    }
+    if (prozente.erwachsen > 100){
+        prozente.erwachsen = 100;
+    }
+    if (prozente.sport > 100){
+        prozente.sport = 100;
+    }
+    if (prozente.rettung > 100){
+        prozente.rettung = 100;
+    }
+    if (prozente.hilfsorga > 100){
+        prozente.hilfsorga = 100;
+    }
+    if (prozente.gemeinschaft > 100){
+        prozente.gemeinschaft = 100;
+    }
 
     container.innerHTML = `
         <h2>Dein passendes Ehrenamt</h2>
