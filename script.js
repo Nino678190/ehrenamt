@@ -1008,7 +1008,7 @@ function endFragen() {
     const container = document.createElement('section');
 
     let ergebnis = ergebnisse.map((org, index) => {
-        const matches = {
+        let matches = {
             kind: Math.abs(kind - org.kind),
             erwachsen: Math.abs(erwachsen - org.erwachsen),
             sport: Math.abs(sport - org.sport),
@@ -1016,6 +1016,24 @@ function endFragen() {
             hilfsorga: Math.abs(hilfsorga - org.hilfsorga),
             gemeinschaft: Math.abs(gemeinschaft - org.gemeinschaft)
         };
+        if (matches.kind < 0){
+            matches.kind = 0;
+        }
+        if (matches.erwachsen < 0){
+            matches.erwachsen = 0;
+        }
+        if (matches.sport < 0){
+            matches.sport = 0;
+        }
+        if (matches.rettung < 0){
+            matches.rettung = 0;
+        }
+        if (matches.hilfsorga < 0){
+            matches.hilfsorga = 0;
+        }
+        if (matches.gemeinschaft < 0){
+            matches.gemeinschaft = 0;
+        }
 
         return {
             organisation: org,
