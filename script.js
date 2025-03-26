@@ -1051,42 +1051,12 @@ function endFragen() {
         gemeinschaft: Math.round(gemeinschaft / 11.5 * 100)
     };
 
-    if (prozente.kind < 0){
-        prozente.kind = 0;
-    }
-    if (prozente.erwachsen < 0){
-        prozente.erwachsen = 0;
-    }
-    if (prozente.sport < 0){
-        prozente.sport = 0;
-    }
-    if (prozente.rettung < 0){
-        prozente.rettung = 0;
-    }
-    if (prozente.hilfsorga < 0){
-        prozente.hilfsorga = 0;
-    }
-    if (prozente.gemeinschaft < 0){
-        prozente.gemeinschaft = 0;
-    }
-    if (prozente.kind > 100){
-        prozente.kind = 100;
-    }
-    if (prozente.erwachsen > 100){
-        prozente.erwachsen = 100;
-    }
-    if (prozente.sport > 100){
-        prozente.sport = 100;
-    }
-    if (prozente.rettung > 100){
-        prozente.rettung = 100;
-    }
-    if (prozente.hilfsorga > 100){
-        prozente.hilfsorga = 100;
-    }
-    if (prozente.gemeinschaft > 100){
-        prozente.gemeinschaft = 100;
-    }
+    prozente.kind = Math.min(100, Math.max(0, prozente.kind));
+    prozente.erwachsen = Math.min(100, Math.max(0, prozente.erwachsen));
+    prozente.sport = Math.min(100, Math.max(0, prozente.sport));
+    prozente.rettung = Math.min(100, Math.max(0, prozente.rettung));
+    prozente.hilfsorga = Math.min(100, Math.max(0, prozente.hilfsorga));
+    prozente.gemeinschaft = Math.min(100, Math.max(0, prozente.gemeinschaft));
 
     container.innerHTML = `
         <h2>Dein passendes Ehrenamt</h2>
