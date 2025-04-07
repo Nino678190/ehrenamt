@@ -1,8 +1,8 @@
 # TODO:
 ## Quiz
-- [ ] Fragen
-- [ ] Kategorien bewertet
-- [ ] Antworten
+- [X] Fragen
+- [X] Kategorien bewertet
+- [X] Antworten
 
 ## Organisationen
-- [ ] Informationen
+- [X] Informationen
