@@ -906,6 +906,7 @@ function addQuestionToUser(){
         </section>
         <section class="buttons">
             <!--- <button onclick="back()">Zurück</button> --->
+            <button onclick="resetQuiz()">Quiz neustarten</button>
             <button onclick="calculate()">Weiter</button>
         </section>
         <section>

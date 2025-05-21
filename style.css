@@ -39,6 +39,11 @@
     color: var(--main-text-color);
 }
 
+@font-face {
+    font-family: "NotoSans";
+    src: url(Noto-Sans/NotoSans-Bold.ttf)
+}
+
 body {
     background-color: var(--main-background);
     color: var(--main-text-color);
