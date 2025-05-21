@@ -602,11 +602,11 @@ const ergebnisse = [
         skillsMitbringen: [],
 
         kind: 2,
-        erwachsen: 9,
+        erwachsen: 4.5,
         sport: 0,
-        rettung: 3,
-        hilfsorga: 14,
-        gemeinschaft: 8
+        rettung: 2,
+        hilfsorga: 10.5,
+        gemeinschaft: 7.5
     },
     {
         organisation: "BdP",
@@ -623,12 +623,12 @@ const ergebnisse = [
         skillsLernen: ["Lernen Verantwortung zu übernehmen"],
         skillsMitbringen: [],
 
-        kind: 13,
-        erwachsen: 7,
-        sport: 4,
+        kind: 9.5,
+        erwachsen: 3.5,
+        sport: 2.5,
         rettung: 0,
         hilfsorga: 2,
-        gemeinschaft: 14
+        gemeinschaft: 11.5
     },
     {
         organisation: "DRK",
@@ -645,11 +645,11 @@ const ergebnisse = [
         skillsLernen: [],
         skillsMitbringen: [],
 
-        kind: 7,
-        erwachsen: 7,
+        kind: 3,
+        erwachsen: 4.4,
         sport: 0,
-        rettung: 14,
-        hilfsorga: 10,
+        rettung: 10,
+        hilfsorga: 9.5,
         gemeinschaft: 6
     },
     {
@@ -683,11 +683,11 @@ const ergebnisse = [
         ],
 
         kind: 3,
-        erwachsen: 10,
-        sport: 14,
-        rettung: 12,
-        hilfsorga: 14,
-        gemeinschaft: 13
+        erwachsen: 2.5,
+        sport: 5,
+        rettung: 10,
+        hilfsorga: 10,
+        gemeinschaft: 10.5
     }, 
     {
         organisation: "FFW",
@@ -719,12 +719,12 @@ const ergebnisse = [
             "Einsatzbereitschaft"
         ],
 
-        kind: 7,
-        erwachsen: 10,
-        sport: 14,
-        rettung: 14,
-        hilfsorga: 10,
-        gemeinschaft: 13
+        kind: 6,
+        erwachsen: 4,
+        sport: 5,
+        rettung: 10,
+        hilfsorga: 8.5,
+        gemeinschaft: 11
     }, 
     {
         organisation: "OKFN",
@@ -741,12 +741,12 @@ const ergebnisse = [
         skillsLernen: ["Teamarbeit"],
         skillsMitbringen: [],
 
-        kind: 3,
-        erwachsen: 14,
+        kind: 6,
+        erwachsen: 5.5,
         sport: 0,
         rettung: 0,
-        hilfsorga: 8,
-        gemeinschaft: 14
+        hilfsorga: 6,
+        gemeinschaft: 11.5
     }, 
     {
         organisation: "DLRG",
@@ -763,12 +763,12 @@ const ergebnisse = [
         skillsLernen: ["Schwimmen", "Gemeinschaft", "Teamarbeit"],
         skillsMitbringen: [],
 
-        kind: 12,
-        erwachsen: 9,
-        sport: 13,
-        rettung: 14,
-        hilfsorga: 7,
-        gemeinschaft: 12
+        kind: 9,
+        erwachsen: 3.5,
+        sport: 4.5,
+        rettung: 10,
+        hilfsorga: 6,
+        gemeinschaft: 10
     }, 
     {
         organisation: "Tierheim Berlin",
@@ -786,11 +786,11 @@ const ergebnisse = [
         skillsMitbringen: [],
 
         kind: 3,
-        erwachsen: 12,
-        sport: 5,
-        rettung: 10,
-        hilfsorga: 14,
-        gemeinschaft: 8
+        erwachsen: 5,
+        sport: 4,
+        rettung: 8,
+        hilfsorga: 10.5,
+        gemeinschaft: 6
     }, 
     {
         organisation: "Bahnhofsmission",
@@ -808,11 +808,11 @@ const ergebnisse = [
         skillsMitbringen: [],
 
         kind: 4,
-        erwachsen: 10,
+        erwachsen: 3.5,
         sport: 0,
         rettung: 2,
-        hilfsorga: 14,
-        gemeinschaft: 10
+        hilfsorga: 10.5,
+        gemeinschaft: 9
     }, 
     {
         organisation: "Malteser",
@@ -830,11 +830,11 @@ const ergebnisse = [
         skillsMitbringen: [],
 
         kind: 3,
-        erwachsen: 14,
-        sport: 5,
-        rettung: 14,
-        hilfsorga: 10,
-        gemeinschaft: 10
+        erwachsen: 5.5,
+        sport: 2.5,
+        rettung: 10,
+        hilfsorga: 7.5,
+        gemeinschaft: 7
     }, 
     {
         organisation: "Kältebus",
@@ -852,11 +852,11 @@ const ergebnisse = [
         skillsMitbringen: [],
 
         kind: 0,
-        erwachsen: 10,
+        erwachsen: 4.5,
         sport: 0,
-        rettung: 14,
-        hilfsorga: 13,
-        gemeinschaft: 9
+        rettung: 10,
+        hilfsorga: 8.5,
+        gemeinschaft: 7
     }, 
     {
         organisation: "Tierhilfe Hof Samtschnute",
@@ -874,10 +874,10 @@ const ergebnisse = [
         skillsMitbringen: [],
 
         kind: 0,
-        erwachsen: 10,
+        erwachsen: 4.4,
         sport: 0,
-        rettung: 14,
-        hilfsorga: 13,
+        rettung: 10,
+        hilfsorga: 7,
         gemeinschaft: 9
     },
 ]
