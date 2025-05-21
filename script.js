@@ -1069,6 +1069,7 @@ function endFragen() {
             <h4>${prozente.hilfsorga}% In einer Hilfsorganisation</h4>
             <h4>${prozente.gemeinschaft}% Gemeinschaftlich</h4>
         </section>
+        <p>Wenn du uns Feedback geben möchtest, zu dieser Messe bitte klicke hier: <a href="https://docs.google.com/forms/d/e/1FAIpQLSegCn3US7PnITdYL1Mc-mpDYQ0FVpDXAwtobTjI1RshcNnH0g/viewform?usp=header" target="_blank">Umfrage</a></p>
     `;
 
     ergebnis.forEach(({ organisation: org, uebereinstimmung, index }) => {
